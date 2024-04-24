@@ -1,0 +1,1800 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/13/2024 7:16:23 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="UKWWHDSQLWI099"
+  DTS:CreatorName="UK\PAM-WMS-Migration"
+  DTS:DTSID="{E803777F-14AC-4368-942A-D38937F70F19}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{3231F672-21E3-4DE7-B199-B8A136DE58EC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SAP_Titles_Extract_CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{909A865B-6107-44B9-B930-EABC88263537}"
+      DTS:ObjectName="SAP_Titles_Extract_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varCurrentFile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISBN"
+              DTS:DTSID="{39FC734C-F956-42FE-9C93-11FA2452A041}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created On"
+              DTS:DTSID="{C1F69DA0-FB34-43DF-AC74-CF3DD51268FB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Plant"
+              DTS:DTSID="{D3C7F080-575A-4A06-B1CE-EA2D2ED0A436}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Storage Location"
+              DTS:DTSID="{407F9602-A9C3-4F25-AA34-0F1BB0B208D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Supply Edition"
+              DTS:DTSID="{5B547648-E210-47F4-BBDF-C106880A9AA4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Answer Code for Reqs"
+              DTS:DTSID="{BA15BA7D-9188-4DE7-A4A0-71274E0B7646}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Answer Code Text"
+              DTS:DTSID="{796E1792-EC92-4074-AE92-7A75DBEBCAAC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISBN Name"
+              DTS:DTSID="{AB146CE0-92A4-4401-9BD3-59980B2C7B20}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Original Pub Date of Product"
+              DTS:DTSID="{3151F1D9-B04C-4A11-B671-75BC0F2285D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Comm  imp  code no "
+              DTS:DTSID="{07F45F97-5FD6-4965-93E8-0EAB18A8E7D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Commodity code 2"
+              DTS:DTSID="{B2A49887-5006-4E2F-A7BB-BC075A843DBD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SE publication date"
+              DTS:DTSID="{9762E07B-6FA7-4065-AD36-12161EE75257}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SE publication price"
+              DTS:DTSID="{90072518-7F6F-4500-8BAC-9E077A3F1BBD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Author Artist"
+              DTS:DTSID="{BBD70D4C-C035-41AB-A79A-F27456E8CC94}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance publisher"
+              DTS:DTSID="{9F949B1F-BC37-486B-B9AC-C5839CD872B2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance publisher description"
+              DTS:DTSID="{872B4FD8-750C-45D7-9A0E-533CF9D014FE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance Imprint"
+              DTS:DTSID="{96C057B4-2050-46A3-A50B-1E83F59FC9A8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance imprint description"
+              DTS:DTSID="{37F07095-9143-45C7-9BAD-0D3D9D65C3EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Export Pub Date of Product"
+              DTS:DTSID="{DF353370-05EE-49D3-B948-88AA64538E4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Binding"
+              DTS:DTSID="{FBE393B2-72F5-4944-ABE3-238A2A138EB0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Binding Description"
+              DTS:DTSID="{E08AE0A3-0D72-4417-A829-A70E06208DB5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country of origin"
+              DTS:DTSID="{57D2F50A-5FBA-4933-BE58-FF4A9E20C7E7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E9E6E1EA-47F9-4B87-AD53-AC02741EE27E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varCurrentFile">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{502C053B-1075-4FDB-BB75-379D80A91CF3}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="varRunID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{44D64CB8-D956-4054-9B3B-00D600FEA571}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSourceFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">Y:\SAP Extracts\Titles</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Stage Title Data"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{96240C4A-B86C-463D-B1CE-AD92392B5807}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Stage Title Data">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Stage Title Data\Foreach Loop Container"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{89E6E9C6-7500-4FA5-80E1-DA4740D402FE}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Foreach Loop Container">
+          <DTS:ForEachEnumerator
+            DTS:CreationName="Microsoft.ForEachFileEnumerator"
+            DTS:DTSID="{D1297655-7804-4AC9-A43E-AC656C356415}"
+            DTS:ObjectName="{D1297655-7804-4AC9-A43E-AC656C356415}">
+            <DTS:ObjectData>
+              <ForEachFileEnumeratorProperties>
+                <FEFEProperty
+                  Folder="Y:\SAP Extracts\Titles" />
+                <FEFEProperty
+                  FileSpec="*csv*" />
+                <FEFEProperty
+                  FileNameRetrievalType="0" />
+                <FEFEProperty
+                  Recurse="0" />
+              </ForEachFileEnumeratorProperties>
+            </DTS:ObjectData>
+          </DTS:ForEachEnumerator>
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{1E0813DC-31F9-4122-8B22-5B7EF15376E5}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Stage Titles Extact"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records"
+                      componentClassID="Microsoft.DerivedColumn"
+                      contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                      description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                      name="attach run_id on source records"
+                      usesDispositions="true">
+                      <inputs>
+                        <input
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Inputs[Derived Column Input]"
+                          description="Input to the Derived Column Transformation"
+                          name="Derived Column Input">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Output]"
+                          description="Default Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          name="Derived Column Output"
+                          synchronousInputId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Output].Columns[run_id]"
+                              dataType="i4"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Output].Columns[run_id]"
+                              name="run_id"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">@[User::varRunID]</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">@[User::varRunID]</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                        <output
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output]"
+                          description="Error Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Derived Column Error Output"
+                          synchronousInputId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles"
+                      componentClassID="Microsoft.FlatFileSource"
+                      contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Flat File Source"
+                      localeId="2057"
+                      name="Read Titles"
+                      usesDispositions="true"
+                      version="1">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Specifies whether zero-length columns are treated as null."
+                          name="RetainNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                          name="FileNameColumnName"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Connections[FlatFileConnection]"
+                          connectionManagerID="Package.ConnectionManagers[SAP_Titles_Extract_CSV]"
+                          connectionManagerRefId="Package.ConnectionManagers[SAP_Titles_Extract_CSV]"
+                          name="FlatFileConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output]"
+                          name="Flat File Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[ISBN]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[ISBN]"
+                              name="ISBN"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Created On]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Created On]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Created On]"
+                              name="Created On"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Plant]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Plant]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Plant]"
+                              name="Plant"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Storage Location]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Storage Location]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Storage Location]"
+                              name="Storage Location"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Supply Edition]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Supply Edition]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Supply Edition]"
+                              name="Supply Edition"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Answer Code for Reqs]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code for Reqs]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Answer Code for Reqs]"
+                              name="Answer Code for Reqs"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Answer Code Text]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code Text]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Answer Code Text]"
+                              name="Answer Code Text"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[ISBN Name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN Name]"
+                              length="500"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[ISBN Name]"
+                              name="ISBN Name"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Original Pub Date of Product]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Original Pub Date of Product]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Original Pub Date of Product]"
+                              name="Original Pub Date of Product"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Comm  imp  code no ]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Comm  imp  code no ]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Comm  imp  code no ]"
+                              name="Comm  imp  code no "
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Commodity code 2]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Commodity code 2]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Commodity code 2]"
+                              name="Commodity code 2"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[SE publication date]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication date]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[SE publication date]"
+                              name="SE publication date"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[SE publication price]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication price]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[SE publication price]"
+                              name="SE publication price"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Author Artist]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Author Artist]"
+                              length="500"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Author Artist]"
+                              name="Author Artist"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance publisher]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance publisher]"
+                              name="Finance publisher"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance publisher description]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher description]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance publisher description]"
+                              name="Finance publisher description"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance Imprint]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance Imprint]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance Imprint]"
+                              name="Finance Imprint"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance imprint description]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance imprint description]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance imprint description]"
+                              name="Finance imprint description"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Export Pub Date of Product]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Export Pub Date of Product]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Export Pub Date of Product]"
+                              name="Export Pub Date of Product"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Binding]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Binding]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Binding]"
+                              name="Binding"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Binding Description]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Binding Description]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Binding Description]"
+                              name="Binding Description"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Country of origin]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Country of origin]"
+                              length="50"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Country of origin]"
+                              name="Country of origin"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="ISBN" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Created On]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Created On" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Plant]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Plant" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Storage Location]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Storage Location" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Supply Edition]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Supply Edition" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code for Reqs]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Answer Code for Reqs" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code Text]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Answer Code Text" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="ISBN Name" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Original Pub Date of Product]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Original Pub Date of Product" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Comm  imp  code no ]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Comm  imp  code no " />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Commodity code 2]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Commodity code 2" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication date]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="SE publication date" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication price]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="SE publication price" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Author Artist]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Author Artist" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance publisher" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance publisher description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance Imprint]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance Imprint" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Finance imprint description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance imprint description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Export Pub Date of Product]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Export Pub Date of Product" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Binding]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Binding" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Binding Description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Binding Description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].ExternalColumns[Country of origin]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Country of origin" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Error Output]"
+                          isErrorOut="true"
+                          name="Flat File Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              codePage="1252"
+                              dataType="text"
+                              description="Flat File Source Error Output Column"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              name="Flat File Source Error Output Column" />
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                      description="OLE DB Destination"
+                      name="sap_title_data"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[source].[sap_title_data]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepIdentity">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Connections[OleDbConnection]"
+                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
+                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input]"
+                          errorOrTruncationOperation="Insert"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="OLE DB Destination Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[ISBN]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="ISBN"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[ISBN]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Created On]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Created On"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Created On]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Plant]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Plant"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Plant]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Storage Location]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Storage Location"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Storage Location]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Supply Edition]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Supply Edition"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Supply Edition]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Answer Code for Reqs]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Answer Code for Reqs"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Answer Code for Reqs]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Answer Code Text]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Answer Code Text"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Answer Code Text]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[ISBN Name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="ISBN Name"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[ISBN Name]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Original Pub Date of Product]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Original Pub Date of Product"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Original Pub Date of Product]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Comm  imp  code no ]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Comm  imp  code no "
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Comm  imp  code no ]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Commodity code 2]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Commodity code 2"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Commodity code 2]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[SE publication date]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="SE publication date"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[SE publication date]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[SE publication price]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="SE publication price"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[SE publication price]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Author Artist]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Author Artist"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Author Artist]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Finance publisher]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Finance publisher"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance publisher]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Finance publisher description]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Finance publisher description"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance publisher description]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Finance Imprint]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Finance Imprint"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance Imprint]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Finance imprint description]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Finance imprint description"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Finance imprint description]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Export Pub Date of Product]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Export Pub Date of Product"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Export Pub Date of Product]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Binding]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Binding"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Binding]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Binding Description]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Binding Description"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Binding Description]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[Country of origin]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Country of origin"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output].Columns[Country of origin]" />
+                            <inputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].Columns[run_id]"
+                              cachedDataType="i4"
+                              cachedName="run_id"
+                              externalMetadataColumnId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Output].Columns[run_id]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="ISBN" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Created On" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Plant" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Storage Location" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Supply Edition" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Answer Code for Reqs" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Answer Code Text" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="ISBN Name" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Original Pub Date of Product" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Comm  imp  code no " />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Commodity code 2" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="SE publication date" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="SE publication price" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Author Artist" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance publisher" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance publisher description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance Imprint" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Finance imprint description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Export Pub Date of Product" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Binding" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Binding Description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
+                              codePage="1252"
+                              dataType="str"
+                              length="50"
+                              name="Country of origin" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
+                              dataType="i4"
+                              name="run_id" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Outputs[OLE DB Destination Error Output]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="OLE DB Destination Error Output"
+                          synchronousInputId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact.Paths[Derived Column Output]"
+                      endId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Inputs[OLE DB Destination Input]"
+                      name="Derived Column Output"
+                      startId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Outputs[Derived Column Output]" />
+                    <path
+                      refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact.Paths[Flat File Source Output]"
+                      endId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records.Inputs[Derived Column Input]"
+                      name="Flat File Source Output"
+                      startId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles.Outputs[Flat File Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{2AFAF28D-EE39-4597-9DBA-399B9182A7F9}"
+              DTS:ObjectName="{2AFAF28D-EE39-4597-9DBA-399B9182A7F9}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::varCurrentFile" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Stage Title Data\Truncate sap_title_data"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{4ABAEABA-8478-41BC-A154-AC88CAE0687F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate sap_title_data"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE source.sap_title_data;&#xA;GO&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'New'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varRunID"
+                SQLTask:ParameterDirection="Output"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Stage Title Data\update run_status"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{3652CEAB-C44C-4482-B8F2-20F353EA2995}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="update run_status"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_status = 'Staged' WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="User::varRunID"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="3"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Stage Title Data.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{A2FD973C-67E8-4BAB-A7EA-A0CB78EE5B36}"
+          DTS:From="Package\Stage Title Data\Truncate sap_title_data"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Stage Title Data\Foreach Loop Container" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Stage Title Data.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{5516AB24-AC09-4127-81C5-32BB3424271B}"
+          DTS:From="Package\Stage Title Data\Foreach Loop Container"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Stage Title Data\update run_status" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact"
+          TopLeft="18.4999941512946,7.29473945645415" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="205.333333333334,106"
+          Size="205.333333333334,148.666666666667"
+          Id="Package\Stage Title Data\Foreach Loop Container"
+          TopLeft="123.333333333333,113.866666666667" />
+        <NodeLayout
+          Size="190.666666666667,42.6666666666667"
+          Id="Package\Stage Title Data\Truncate sap_title_data"
+          TopLeft="8.58333182459079,13.5087745055378" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Stage Title Data\update run_status"
+          TopLeft="315.458327251797,302.92983258475" />
+        <EdgeLayout
+          Id="Package\Stage Title Data.PrecedenceConstraints[Constraint]"
+          TopLeft="103.916665157924,56.1754411722045">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122.083334842076,57.6912254944622"
+              Start="0,0"
+              End="122.083334842076,50.1912254944622">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.8456127472311" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.8456127472311"
+                    Point2="0,28.8456127472311"
+                    Point3="4,28.8456127472311" />
+                  <mssgle:LineSegment
+                    End="118.083334842076,28.8456127472311" />
+                  <mssgle:CubicBezierSegment
+                    Point1="118.083334842076,28.8456127472311"
+                    Point2="122.083334842076,28.8456127472311"
+                    Point3="122.083334842076,32.8456127472311" />
+                  <mssgle:LineSegment
+                    End="122.083334842076,50.1912254944622" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage Title Data.PrecedenceConstraints[Constraint 1]"
+          TopLeft="226,261.866666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="172.124993918464,41.0631659180832"
+              Start="0,0"
+              End="172.124993918464,33.5631659180832">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5315829590416" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5315829590416"
+                    Point2="0,20.5315829590416"
+                    Point3="4,20.5315829590416" />
+                  <mssgle:LineSegment
+                    End="168.124993918464,20.5315829590416" />
+                  <mssgle:CubicBezierSegment
+                    Point1="168.124993918464,20.5315829590416"
+                    Point2="172.124993918464,20.5315829590416"
+                    Point3="172.124993918464,24.5315829590416" />
+                  <mssgle:LineSegment
+                    End="172.124993918464,33.5631659180832" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="576.666666666667,402.666666666667"
+          Size="576.666666666667,446"
+          Id="Package\Stage Title Data"
+          TopLeft="92.4999986216426,80.7368436249339" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="133.333333333334,42.6666666666667"
+          Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\Read Titles"
+          TopLeft="161.874997587875,133.421055142899" />
+        <NodeLayout
+          Size="146.666666666667,42.6666666666667"
+          Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data"
+          TopLeft="645.624990379438,130.684212986122" />
+        <NodeLayout
+          Size="229.333333333334,42.6666666666667"
+          Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\attach run_id on source records"
+          TopLeft="357.499994672835,229.894741169304" />
+        <EdgeLayout
+          Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact.Paths[Flat File Source Output]"
+          TopLeft="228.541664254542,176.087721809566">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="206.736108196071,53.8070193597378"
+              Start="0,0"
+              End="206.736108196071,46.3070193597378">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.0605334753172" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.0605334753172"
+                    Point2="0,32.0605334753172"
+                    Point3="4,32.0605334753172" />
+                  <mssgle:LineSegment
+                    End="202.736108196071,32.0605334753172" />
+                  <mssgle:CubicBezierSegment
+                    Point1="202.736108196071,32.0605334753172"
+                    Point2="206.736108196071,32.0605334753172"
+                    Point3="206.736108196071,36.0605334753172" />
+                  <mssgle:LineSegment
+                    End="206.736108196071,46.3070193597378" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact.Paths[Derived Column Output]"
+          TopLeft="509.05555022839,229.894741169304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="209.902773484381,-56.5438615165146"
+              Start="0,0"
+              End="209.902773484381,-49.0438615165146">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-18.8525999200694" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-18.8525999200694"
+                    Point2="0,-22.8525999200694"
+                    Point3="4,-22.8525999200694" />
+                  <mssgle:LineSegment
+                    End="205.902773484381,-22.8525999200694" />
+                  <mssgle:CubicBezierSegment
+                    Point1="205.902773484381,-22.8525999200694"
+                    Point2="209.902773484381,-22.8525999200694"
+                    Point3="209.902773484381,-26.8525999200694" />
+                  <mssgle:LineSegment
+                    End="209.902773484381,-49.0438615165146" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
