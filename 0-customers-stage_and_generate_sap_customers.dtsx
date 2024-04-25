@@ -1,0 +1,1783 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/13/2024 7:16:23 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="UKWWHDSQLWI099"
+  DTS:CreatorName="UK\PAM-WMS-Migration"
+  DTS:DTSID="{C215114A-4684-45B5-AECA-F249C83F0882}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5270.0"
+  DTS:LocaleID="2057"
+  DTS:ObjectName="0-customers-stage_sap_customers"
+  DTS:PackageType="5"
+  DTS:VersionBuild="62"
+  DTS:VersionGUID="{20E6578C-B6C1-4A98-9D62-C1EC009554B7}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SAP_Customers_CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9FC729BA-46D1-4D72-B876-F52A50F7BBE8}"
+      DTS:ObjectName="SAP_Customers_CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Y:\SAP Extracts\Customers\customers_extract_20240408\202205-202207.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer"
+              DTS:DTSID="{B5C583AF-3641-4FBE-9C38-10B8F64BF63B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Name"
+              DTS:DTSID="{F4CAF8BA-6C41-4268-9AAE-09F5E032A5AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Address Type"
+              DTS:DTSID="{0BCC104A-5AD6-443B-A5D8-379F674C7054}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="House Num &amp; Street"
+              DTS:DTSID="{964A5B8E-8C15-4687-A1AC-3BE4DBBC7B3A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="City"
+              DTS:DTSID="{1D021739-8B9B-4197-B5C6-8138E2516A65}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region description"
+              DTS:DTSID="{C2BC5357-5025-42ED-9E09-5A71071B37CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{A4C82E6E-E602-4D80-AE7F-7AD159A8415B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Postal code"
+              DTS:DTSID="{DB675069-C2D3-422B-8BF1-946AE509F48A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Telephone"
+              DTS:DTSID="{6B19E38A-F28D-4E09-BD4E-597EF48C41C5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fax"
+              DTS:DTSID="{721A3C08-9CA3-46ED-B5BF-0810F1B407A7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VAT Country code"
+              DTS:DTSID="{DC06941E-9273-4CB8-84B0-0A6D56639FAD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="VAT registration number"
+              DTS:DTSID="{2B7D8375-7C8E-4147-9B94-BA0335185702}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Main business"
+              DTS:DTSID="{EBFBF5FD-8EEB-4017-AA7D-14417FAAB9A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Currency"
+              DTS:DTSID="{9E2C87AB-7814-484E-BCFC-B428298937E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email1"
+              DTS:DTSID="{20BE358B-1579-4153-AE03-9CB07D5D7952}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email2"
+              DTS:DTSID="{8E1A28F7-310D-4319-8754-A46B02EA3322}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email3"
+              DTS:DTSID="{D9D3FF9C-DE3E-403B-8D7C-0AD9213DA336}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email4"
+              DTS:DTSID="{385E9797-3F89-461C-B873-2FE26ACF2086}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Email5"
+              DTS:DTSID="{B2597070-F037-4C83-998D-1599D8A675C1}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SAP_Titles_Extract_CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{AEC33398-5EA4-4AA7-9C8B-348CA718175D}"
+      DTS:ObjectName="SAP_Titles_Extract_CSV">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::varCurrentFile]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2057"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISBN"
+              DTS:DTSID="{3D5211F6-EDFA-4E65-96E6-18EB3A0B7DD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Created On"
+              DTS:DTSID="{5271E425-49EC-46D3-95EA-A3E4E0C2DA9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Plant"
+              DTS:DTSID="{FB2B70F0-52AC-456D-9A66-71EF13A1ED52}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Storage Location"
+              DTS:DTSID="{8D4488BF-1156-4E99-8715-E9F5879295C0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Supply Edition"
+              DTS:DTSID="{7ABD9BE9-DD12-45F1-A22D-1BFF81646807}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Answer Code for Reqs"
+              DTS:DTSID="{13476D97-EEDF-4919-8947-3E26129D709F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Answer Code Text"
+              DTS:DTSID="{E937344D-73AC-40AA-A128-85F1D6C4E219}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ISBN Name"
+              DTS:DTSID="{AFA29462-C90B-4CC6-928A-0E9F71D4AE0C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Original Pub Date of Product"
+              DTS:DTSID="{3A6AD60D-D46E-47C9-BE2C-D567F68E31E8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Comm  imp  code no "
+              DTS:DTSID="{19C245CA-24EF-462B-AEF7-4533D26C2BCD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Commodity code 2"
+              DTS:DTSID="{75A18FBC-3270-4309-932A-F961B2AE8C28}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SE publication date"
+              DTS:DTSID="{AD7AE768-464A-4681-99CD-C7A2172EDD07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SE publication price"
+              DTS:DTSID="{E5C41E3E-99FD-4B0B-A502-1EA9DD5BF677}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Author Artist"
+              DTS:DTSID="{BD57BC4B-4D21-4A2A-A0BA-0EE377CF9CC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance publisher"
+              DTS:DTSID="{CAA2BA22-5D93-48FE-A13A-5382C7A9C678}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance publisher description"
+              DTS:DTSID="{85D1BBF9-F4AB-4A37-8669-C9734C5549AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance Imprint"
+              DTS:DTSID="{5B5DE5B6-75E0-4D49-8D35-6B610CDDB235}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Finance imprint description"
+              DTS:DTSID="{533605C0-1D7C-4B22-86F1-BA4610E6F329}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Export Pub Date of Product"
+              DTS:DTSID="{4D416A21-F133-474A-BA8C-B44E49118D10}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Binding"
+              DTS:DTSID="{2751DD1D-8086-412C-93A7-E3D4346CB4B9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Binding Description"
+              DTS:DTSID="{43AB4282-97AA-43EC-B064-630EFAC5547F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country of origin"
+              DTS:DTSID="{64EA69F5-1476-4A77-8618-BB9A5F5A1707}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{DDCAF9F4-C04D-4AD6-8789-711B1CE599E7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varCurrentFile">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{27B32388-6FB1-42EF-867E-13AA047FE1C2}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varSourceFolder">
+      <DTS:VariableValue
+        DTS:DataType="8">Y:\SAP Extracts\Customers\customers_extract_20240408</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Stage Customers Data"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{6E75EB16-A2E0-4244-858A-0999A6816F1F}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Stage Customers Data">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Stage Customers Data\Foreach Loop Container"
+          DTS:CreationName="STOCK:FOREACHLOOP"
+          DTS:Description="Foreach Loop Container"
+          DTS:DTSID="{83B15990-12C9-4D07-9239-EDCA8FE7048D}"
+          DTS:ExecutableType="STOCK:FOREACHLOOP"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Foreach Loop Container">
+          <DTS:ForEachEnumerator
+            DTS:CreationName="Microsoft.ForEachFileEnumerator"
+            DTS:DTSID="{1CABB13B-C382-4C0F-9AC6-AA25157DAB8F}"
+            DTS:ObjectName="{1CABB13B-C382-4C0F-9AC6-AA25157DAB8F}">
+            <DTS:ObjectData>
+              <ForEachFileEnumeratorProperties>
+                <FEFEProperty
+                  Folder="Y:\SAP Extracts\Customers\customers_extract_20240408" />
+                <FEFEProperty
+                  FileSpec="*csv*" />
+                <FEFEProperty
+                  FileNameRetrievalType="0" />
+                <FEFEProperty
+                  Recurse="0" />
+              </ForEachFileEnumeratorProperties>
+            </DTS:ObjectData>
+          </DTS:ForEachEnumerator>
+          <DTS:Variables />
+          <DTS:Executables>
+            <DTS:Executable
+              DTS:refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract"
+              DTS:CreationName="Microsoft.Pipeline"
+              DTS:Description="Data Flow Task"
+              DTS:DTSID="{2CD698C8-B7CE-4212-87B9-2855BE7F9F3E}"
+              DTS:ExecutableType="Microsoft.Pipeline"
+              DTS:LocaleID="-1"
+              DTS:ObjectName="Stage Customer Extract"
+              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+              <DTS:Variables />
+              <DTS:ObjectData>
+                <pipeline
+                  version="1">
+                  <components>
+                    <component
+                      refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column"
+                      componentClassID="Microsoft.DerivedColumn"
+                      contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                      description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                      name="add filename column"
+                      usesDispositions="true">
+                      <inputs>
+                        <input
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Inputs[Derived Column Input]"
+                          description="Input to the Derived Column Transformation"
+                          name="Derived Column Input">
+                          <externalMetadataColumns />
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Output]"
+                          description="Default Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          name="Derived Column Output"
+                          synchronousInputId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Output].Columns[source_file_name]"
+                              dataType="wstr"
+                              errorOrTruncationOperation="Computation"
+                              errorRowDisposition="FailComponent"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Output].Columns[source_file_name]"
+                              name="source_file_name"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Expression"
+                                  name="Expression">@[User::varCurrentFile]</property>
+                                <property
+                                  containsID="true"
+                                  dataType="System.String"
+                                  description="Derived Column Friendly Expression"
+                                  expressionType="Notify"
+                                  name="FriendlyExpression">@[User::varCurrentFile]</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                        <output
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Error Output]"
+                          description="Error Output of the Derived Column Transformation"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="Derived Column Error Output"
+                          synchronousInputId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Inputs[Derived Column Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers"
+                      componentClassID="Microsoft.FlatFileSource"
+                      contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                      description="Flat File Source"
+                      localeId="2057"
+                      name="Read Customers"
+                      usesDispositions="true"
+                      version="1">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Specifies whether zero-length columns are treated as null."
+                          name="RetainNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                          name="FileNameColumnName"></property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Connections[FlatFileConnection]"
+                          connectionManagerID="Package.ConnectionManagers[SAP_Customers_CSV]"
+                          connectionManagerRefId="Package.ConnectionManagers[SAP_Customers_CSV]"
+                          name="FlatFileConnection" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output]"
+                          name="Flat File Source Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Customer]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Customer]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Customer]"
+                              name="Customer"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Customer Name]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Customer Name]"
+                              name="Customer Name"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Address Type]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Address Type]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Address Type]"
+                              name="Address Type"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[House Num &amp; Street]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[House Num &amp; Street]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[House Num &amp; Street]"
+                              name="House Num &amp; Street"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[City]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[City]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[City]"
+                              name="City"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Region description]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Region description]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Region description]"
+                              name="Region description"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Country]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Country]"
+                              name="Country"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Postal code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Postal code]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Postal code]"
+                              name="Postal code"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Telephone]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Telephone]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Telephone]"
+                              name="Telephone"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Fax]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Fax]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Fax]"
+                              name="Fax"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[VAT Country code]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[VAT Country code]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[VAT Country code]"
+                              name="VAT Country code"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[VAT registration number]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[VAT registration number]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[VAT registration number]"
+                              name="VAT registration number"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Main business]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Main business]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Main business]"
+                              name="Main business"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Currency]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Currency]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Currency]"
+                              name="Currency"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email1]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email1]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email1]"
+                              name="Email1"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email2]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email2]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email2]"
+                              name="Email2"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email3]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email3]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email3]"
+                              name="Email3"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email4]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email4]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email4]"
+                              name="Email4"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email5]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email5]"
+                              length="500"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email5]"
+                              name="Email5"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the data is in binary format."
+                                  name="UseBinaryFormat">false</property>
+                              </properties>
+                            </outputColumn>
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Customer]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Customer" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Customer Name" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Address Type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Address Type" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[House Num &amp; Street]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="House Num &amp; Street" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[City]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="City" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Region description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Region description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Country]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Country" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Postal code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Postal code" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Telephone]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Telephone" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Fax]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Fax" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[VAT Country code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="VAT Country code" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[VAT registration number]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="VAT registration number" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Main business]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Main business" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Currency]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Currency" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email1]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email1" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email2]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email2" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email3]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email3" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email4]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email4" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email5]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email5" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Error Output]"
+                          isErrorOut="true"
+                          name="Flat File Source Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              codePage="1252"
+                              dataType="text"
+                              description="Flat File Source Error Output Column"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                              name="Flat File Source Error Output Column" />
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
+                      refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers"
+                      componentClassID="Microsoft.OLEDBDestination"
+                      contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                      description="OLE DB Destination"
+                      name="sap_customers"
+                      usesDispositions="true"
+                      version="4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                          name="CommandTimeout">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the name of the database object used to open a rowset."
+                          name="OpenRowset">[source].[sap_customers]</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the variable that contains the name of the database object used to open a rowset."
+                          name="OpenRowsetVariable"></property>
+                        <property
+                          dataType="System.String"
+                          description="The SQL command to be executed."
+                          name="SqlCommand"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the column code page to use when code page information is unavailable from the data source."
+                          name="DefaultCodePage">1252</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Forces the use of the DefaultCodePage property value when describing character data."
+                          name="AlwaysUseDefaultCodePage">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the mode used to access the database."
+                          name="AccessMode"
+                          typeConverter="AccessMode">3</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepIdentity">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                          name="FastLoadKeepNulls">false</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                          name="FastLoadMaxInsertCommitSize">2147483647</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Connections[OleDbConnection]"
+                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
+                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          description="The OLE DB runtime connection used to access the database."
+                          name="OleDbConnection" />
+                      </connections>
+                      <inputs>
+                        <input
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input]"
+                          errorOrTruncationOperation="Insert"
+                          errorRowDisposition="FailComponent"
+                          hasSideEffects="true"
+                          name="OLE DB Destination Input">
+                          <inputColumns>
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Customer]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Customer"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Customer]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Customer Name]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Customer Name"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Customer Name]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Customer Name]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Address Type]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Address Type"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Address Type]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Address Type]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[House Num &amp; Street]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="House Num &amp; Street"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[House Num &amp; Street]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[House Num &amp; Street]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[City]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="City"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[City]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Region description]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Region description"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Region description]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Region description]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Country]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Country"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Country]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Postal code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Postal code"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Postal code]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Postal code]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Telephone]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Telephone"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Telephone]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Telephone]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Fax]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Fax"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Fax]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[VAT Country code]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="VAT Country code"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[VAT Country code]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[VAT Country code]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[VAT registration number]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="VAT registration number"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[VAT registration number]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[VAT registration number]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Main business]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Main business"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Main business]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Main business]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Currency]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Currency"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Currency]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[source_file_name]"
+                              cachedDataType="wstr"
+                              cachedLength="500"
+                              cachedName="source_file_name"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[source_file_name]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Output].Columns[source_file_name]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Email1]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Email1"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email1]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email1]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Email2]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Email2"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email2]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email2]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Email3]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Email3"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email3]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email3]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Email4]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Email4"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email4]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email4]" />
+                            <inputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].Columns[Email5]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="500"
+                              cachedName="Email5"
+                              externalMetadataColumnId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email5]"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].Columns[Email5]" />
+                          </inputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Customer]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Customer" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Customer Name]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Customer Name" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Address Type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Address Type" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[House Num &amp; Street]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="House Num &amp; Street" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[City]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="City" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Region description]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Region description" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Country]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Country" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Postal code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Postal code" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Telephone]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Telephone" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Fax]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Fax" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[VAT Country code]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="VAT Country code" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[VAT registration number]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="VAT registration number" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Main business]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Main business" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Currency]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Currency" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[source_file_name]"
+                              dataType="wstr"
+                              length="500"
+                              name="source_file_name" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email1]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email1" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email2]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email2" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email3]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email3" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email4]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email4" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Email5]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Email5" />
+                          </externalMetadataColumns>
+                        </input>
+                      </inputs>
+                      <outputs>
+                        <output
+                          refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Outputs[OLE DB Destination Error Output]"
+                          exclusionGroup="1"
+                          isErrorOut="true"
+                          name="OLE DB Destination Error Output"
+                          synchronousInputId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input]">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                  </components>
+                  <paths>
+                    <path
+                      refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract.Paths[Derived Column Output]"
+                      endId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input]"
+                      name="Derived Column Output"
+                      startId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Outputs[Derived Column Output]" />
+                    <path
+                      refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract.Paths[Flat File Source Output]"
+                      endId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column.Inputs[Derived Column Input]"
+                      name="Flat File Source Output"
+                      startId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output]" />
+                  </paths>
+                </pipeline>
+              </DTS:ObjectData>
+            </DTS:Executable>
+          </DTS:Executables>
+          <DTS:ForEachVariableMappings>
+            <DTS:ForEachVariableMapping
+              DTS:CreationName=""
+              DTS:DTSID="{B31D8945-D551-4F56-930C-661EDA1BF832}"
+              DTS:ObjectName="{B31D8945-D551-4F56-930C-661EDA1BF832}"
+              DTS:ValueIndex="0"
+              DTS:VariableName="User::varCurrentFile" />
+          </DTS:ForEachVariableMappings>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Stage Customers Data\Truncate sap_customers"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{530EA996-FD34-4D07-AF2F-137FF4DB838F}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Truncate sap_customers"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE source.sap_customers;&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Stage Customers Data.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{5A982ACD-11C7-4211-B49E-C3DC51DBA162}"
+          DTS:From="Package\Stage Customers Data\Truncate sap_customers"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Stage Customers Data\Foreach Loop Container" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract"
+          TopLeft="17.2499941699211,7.29473945645412" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="214,106.666666666667"
+          Size="214,149.333333333334"
+          Id="Package\Stage Customers Data\Foreach Loop Container"
+          TopLeft="123.333333333333,113.866666666667" />
+        <NodeLayout
+          Size="196.666666666667,42.6666666666667"
+          Id="Package\Stage Customers Data\Truncate sap_customers"
+          TopLeft="8.58333182459079,13.5087745055378" />
+        <EdgeLayout
+          Id="Package\Stage Customers Data.PrecedenceConstraints[Constraint]"
+          TopLeft="106.916665157924,56.1754411722045">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="119.083334842076,57.6912254944625"
+              Start="0,0"
+              End="119.083334842076,50.1912254944625">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.8456127472313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.8456127472313"
+                    Point2="0,28.8456127472313"
+                    Point3="4,28.8456127472313" />
+                  <mssgle:LineSegment
+                    End="115.083334842076,28.8456127472313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="115.083334842076,28.8456127472313"
+                    Point2="119.083334842076,28.8456127472313"
+                    Point3="119.083334842076,32.8456127472313" />
+                  <mssgle:LineSegment
+                    End="119.083334842076,50.1912254944625" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="576.666666666667,402.666666666667"
+          Size="576.666666666667,446"
+          Id="Package\Stage Customers Data"
+          TopLeft="92.4999986216426,80.736843624934" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers"
+          TopLeft="523.749992195517,129.315791907733" />
+        <NodeLayout
+          Size="160,42.6666666666667"
+          Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers"
+          TopLeft="161.874997587875,133.421055142899" />
+        <NodeLayout
+          Size="178.666666666667,42.6666666666667"
+          Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column"
+          TopLeft="354.999994710088,208.000003915084" />
+        <EdgeLayout
+          Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract.Paths[Flat File Source Output]"
+          TopLeft="241.874997587875,176.087721809566">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="202.458330455546,31.9122821055184"
+              Start="0,0"
+              End="202.458330455546,24.4122821055184">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.9561410527592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.9561410527592"
+                    Point2="0,15.9561410527592"
+                    Point3="4,15.9561410527592" />
+                  <mssgle:LineSegment
+                    End="198.458330455546,15.9561410527592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="198.458330455546,15.9561410527592"
+                    Point2="202.458330455546,15.9561410527592"
+                    Point3="202.458330455546,19.9561410527592" />
+                  <mssgle:LineSegment
+                    End="202.458330455546,24.4122821055184" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract.Paths[Derived Column Output]"
+          TopLeft="472.777772487866,208.000003915084">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="126.972219707651,-36.0175453406842"
+              Start="0,0"
+              End="126.972219707651,-28.5175453406842">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-10.5988275493306" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-10.5988275493306"
+                    Point2="0,-14.5988275493306"
+                    Point3="4,-14.5988275493306" />
+                  <mssgle:LineSegment
+                    End="122.972219707651,-14.5988275493306" />
+                  <mssgle:CubicBezierSegment
+                    Point1="122.972219707651,-14.5988275493306"
+                    Point2="126.972219707651,-14.5988275493306"
+                    Point3="126.972219707651,-18.5988275493306" />
+                  <mssgle:LineSegment
+                    End="126.972219707651,-28.5175453406842" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
