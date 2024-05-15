@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="0-customers-stage_sap_customers"
   DTS:PackageType="5"
-  DTS:VersionBuild="62"
-  DTS:VersionGUID="{20E6578C-B6C1-4A98-9D62-C1EC009554B7}">
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{F0C06A7A-9C74-4828-B7D1-C56DCF070D00}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -35,173 +35,173 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Customer"
-              DTS:DTSID="{B5C583AF-3641-4FBE-9C38-10B8F64BF63B}"
+              DTS:DTSID="{6E1049EA-6C33-4AB9-A222-35070CFFD535}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Customer Name"
-              DTS:DTSID="{F4CAF8BA-6C41-4268-9AAE-09F5E032A5AF}"
+              DTS:DTSID="{80E5CF87-FBCC-4B44-8309-336459C87CF4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Type"
-              DTS:DTSID="{0BCC104A-5AD6-443B-A5D8-379F674C7054}"
+              DTS:DTSID="{3790DD5D-A4C9-440A-8A53-413617D4B066}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="House Num &amp; Street"
-              DTS:DTSID="{964A5B8E-8C15-4687-A1AC-3BE4DBBC7B3A}"
+              DTS:DTSID="{3FBE4857-9846-4034-8C4F-9878FE80501A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{1D021739-8B9B-4197-B5C6-8138E2516A65}"
+              DTS:DTSID="{F559EF7A-0793-433E-B47C-0A7A8539FBC5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Region description"
-              DTS:DTSID="{C2BC5357-5025-42ED-9E09-5A71071B37CE}"
+              DTS:DTSID="{EEBB851D-33B0-434B-80A9-14374FEA7D84}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{A4C82E6E-E602-4D80-AE7F-7AD159A8415B}"
+              DTS:DTSID="{CBD9A3FA-7DB0-4F63-BC4D-C165FE3303B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Postal code"
-              DTS:DTSID="{DB675069-C2D3-422B-8BF1-946AE509F48A}"
+              DTS:DTSID="{C8175C1D-2009-4117-9352-E81C06905D6A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Telephone"
-              DTS:DTSID="{6B19E38A-F28D-4E09-BD4E-597EF48C41C5}"
+              DTS:DTSID="{3C9C3CDC-FF52-4EBB-9A9E-DAAD6CCF6AF6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Fax"
-              DTS:DTSID="{721A3C08-9CA3-46ED-B5BF-0810F1B407A7}"
+              DTS:DTSID="{1205D57F-8C6D-42B5-B6F4-7C1C60AFC469}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="VAT Country code"
-              DTS:DTSID="{DC06941E-9273-4CB8-84B0-0A6D56639FAD}"
+              DTS:DTSID="{EBC299E0-0BBA-47CA-A8B1-1474077E21FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="VAT registration number"
-              DTS:DTSID="{2B7D8375-7C8E-4147-9B94-BA0335185702}"
+              DTS:DTSID="{F9590021-72DF-43FB-B48D-B7BFBD2347E3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Main business"
-              DTS:DTSID="{EBFBF5FD-8EEB-4017-AA7D-14417FAAB9A0}"
+              DTS:DTSID="{275888DE-F518-4A4D-ADD9-A6F28E3D4B0D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Currency"
-              DTS:DTSID="{9E2C87AB-7814-484E-BCFC-B428298937E8}"
+              DTS:DTSID="{15A26A79-E0B5-46CD-9B83-40C4E1D58872}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Email1"
-              DTS:DTSID="{20BE358B-1579-4153-AE03-9CB07D5D7952}"
+              DTS:DTSID="{83C7C8F3-8E45-454E-A835-633AB9CAAE22}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Email2"
-              DTS:DTSID="{8E1A28F7-310D-4319-8754-A46B02EA3322}"
+              DTS:DTSID="{9B2FC763-3A18-4F85-8BD8-4535BA73B81B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Email3"
-              DTS:DTSID="{D9D3FF9C-DE3E-403B-8D7C-0AD9213DA336}"
+              DTS:DTSID="{EB596313-E46E-4E89-9715-9EEE2A2999BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Email4"
-              DTS:DTSID="{385E9797-3F89-461C-B873-2FE26ACF2086}"
+              DTS:DTSID="{8BA9747F-3D79-4B14-AA86-E0D59AA219B6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Email5"
-              DTS:DTSID="{B2597070-F037-4C83-998D-1599D8A675C1}"
+              DTS:DTSID="{C1956F64-3A0B-4CB1-8127-9BA884173076}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -480,7 +480,7 @@
                 <FEFEProperty
                   FileNameRetrievalType="0" />
                 <FEFEProperty
-                  Recurse="0" />
+                  Recurse="-1" />
               </ForEachFileEnumeratorProperties>
             </DTS:ObjectData>
           </DTS:ForEachEnumerator>
@@ -1030,115 +1030,115 @@
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Customer]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Customer" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Customer Name]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Customer Name" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Address Type]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Address Type" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[House Num &amp; Street]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="House Num &amp; Street" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[City]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="City" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Region description]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Region description" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Country]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Country" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Postal code]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Postal code" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Telephone]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Telephone" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Fax]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Fax" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[VAT Country code]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="VAT Country code" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[VAT registration number]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="VAT registration number" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Main business]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Main business" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Currency]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Currency" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email1]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Email1" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email2]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Email2" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email3]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Email3" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email4]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Email4" />
                             <externalMetadataColumn
                               refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers.Outputs[Flat File Source Output].ExternalColumns[Email5]"
                               codePage="1252"
                               dataType="str"
-                              length="500"
+                              length="50"
                               name="Email5" />
                           </externalMetadataColumns>
                         </output>
@@ -1524,6 +1524,12 @@
                               dataType="str"
                               length="500"
                               name="Email5" />
+                            <externalMetadataColumn
+                              refId="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers.Inputs[OLE DB Destination Input].ExternalColumns[Customer Type]"
+                              codePage="1252"
+                              dataType="str"
+                              length="500"
+                              name="Customer Type" />
                           </externalMetadataColumns>
                         </input>
                       </inputs>
@@ -1572,8 +1578,8 @@
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
-              DTS:DTSID="{B31D8945-D551-4F56-930C-661EDA1BF832}"
-              DTS:ObjectName="{B31D8945-D551-4F56-930C-661EDA1BF832}"
+              DTS:DTSID="{96B5DD8D-CB36-4F41-B823-99B67A16DC92}"
+              DTS:ObjectName="{96B5DD8D-CB36-4F41-B823-99B67A16DC92}"
               DTS:ValueIndex="0"
               DTS:VariableName="User::varCurrentFile" />
           </DTS:ForEachVariableMappings>
@@ -1620,18 +1626,18 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="192,42.6666666666667"
+          Size="192,43"
           Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract"
           TopLeft="17.2499941699211,7.29473945645412" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="214,106.666666666667"
-          Size="214,149.333333333334"
+          PanelSize="217,107"
+          Size="217,149"
           Id="Package\Stage Customers Data\Foreach Loop Container"
           TopLeft="123.333333333333,113.866666666667" />
         <NodeLayout
-          Size="196.666666666667,42.6666666666667"
+          Size="197,43"
           Id="Package\Stage Customers Data\Truncate sap_customers"
           TopLeft="8.58333182459079,13.5087745055378" />
         <EdgeLayout
@@ -1640,9 +1646,9 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="119.083334842076,57.6912254944625"
+              EndConnector="124.750001508742,57.6912254944625"
               Start="0,0"
-              End="119.083334842076,50.1912254944625">
+              End="124.750001508742,50.1912254944625">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -1653,13 +1659,13 @@
                     Point2="0,28.8456127472313"
                     Point3="4,28.8456127472313" />
                   <mssgle:LineSegment
-                    End="115.083334842076,28.8456127472313" />
+                    End="120.750001508742,28.8456127472313" />
                   <mssgle:CubicBezierSegment
-                    Point1="115.083334842076,28.8456127472313"
-                    Point2="119.083334842076,28.8456127472313"
-                    Point3="119.083334842076,32.8456127472313" />
+                    Point1="120.750001508742,28.8456127472313"
+                    Point2="124.750001508742,28.8456127472313"
+                    Point3="124.750001508742,32.8456127472313" />
                   <mssgle:LineSegment
-                    End="119.083334842076,50.1912254944625" />
+                    End="124.750001508742,50.1912254944625" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1671,8 +1677,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="576.666666666667,402.666666666667"
-          Size="576.666666666667,446"
+          PanelSize="577,403"
+          Size="577,446"
           Id="Package\Stage Customers Data"
           TopLeft="92.4999986216426,80.736843624934" />
       </GraphLayout>
@@ -1684,43 +1690,43 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,43"
           Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\sap_customers"
           TopLeft="523.749992195517,129.315791907733" />
         <NodeLayout
-          Size="160,42.6666666666667"
+          Size="160,43"
           Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\Read Customers"
-          TopLeft="161.874997587875,133.421055142899" />
+          TopLeft="159.999997615815,133.421055142899" />
         <NodeLayout
-          Size="178.666666666667,42.6666666666667"
+          Size="180,42"
           Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract\add filename column"
           TopLeft="354.999994710088,208.000003915084" />
         <EdgeLayout
           Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract.Paths[Flat File Source Output]"
-          TopLeft="241.874997587875,176.087721809566">
+          TopLeft="239.999997615815,176.421055142899">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="202.458330455546,31.9122821055184"
+              EndConnector="176.333330427606,31.578948772185"
               Start="0,0"
-              End="202.458330455546,24.4122821055184">
+              End="176.333330427606,24.078948772185">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.9561410527592" />
+                    End="0,14.7804320891849" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,11.9561410527592"
-                    Point2="0,15.9561410527592"
-                    Point3="4,15.9561410527592" />
+                    Point1="0,14.7804320891849"
+                    Point2="0,18.7804320891849"
+                    Point3="4,18.7804320891849" />
                   <mssgle:LineSegment
-                    End="198.458330455546,15.9561410527592" />
+                    End="172.333330427606,18.7804320891849" />
                   <mssgle:CubicBezierSegment
-                    Point1="198.458330455546,15.9561410527592"
-                    Point2="202.458330455546,15.9561410527592"
-                    Point3="202.458330455546,19.9561410527592" />
+                    Point1="172.333330427606,18.7804320891849"
+                    Point2="176.333330427606,18.7804320891849"
+                    Point3="176.333330427606,22.7804320891849" />
                   <mssgle:LineSegment
-                    End="202.458330455546,24.4122821055184" />
+                    End="176.333330427606,24.078948772185" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1731,30 +1737,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract.Paths[Derived Column Output]"
-          TopLeft="472.777772487866,208.000003915084">
+          TopLeft="473.666661376755,208.000003915084">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="126.972219707651,-36.0175453406842"
+              EndConnector="126.083330818762,-35.684212007351"
               Start="0,0"
-              End="126.972219707651,-28.5175453406842">
+              End="126.083330818762,-28.184212007351">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-10.5988275493306" />
+                    End="0,-10.4623238091467" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-10.5988275493306"
-                    Point2="0,-14.5988275493306"
-                    Point3="4,-14.5988275493306" />
+                    Point1="0,-10.4623238091467"
+                    Point2="0,-14.4623238091467"
+                    Point3="4,-14.4623238091467" />
                   <mssgle:LineSegment
-                    End="122.972219707651,-14.5988275493306" />
+                    End="122.083330818762,-14.4623238091467" />
                   <mssgle:CubicBezierSegment
-                    Point1="122.972219707651,-14.5988275493306"
-                    Point2="126.972219707651,-14.5988275493306"
-                    Point3="126.972219707651,-18.5988275493306" />
+                    Point1="122.083330818762,-14.4623238091467"
+                    Point2="126.083330818762,-14.4623238091467"
+                    Point3="126.083330818762,-18.4623238091467" />
                   <mssgle:LineSegment
-                    End="126.972219707651,-28.5175453406842" />
+                    End="126.083330818762,-28.184212007351" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
