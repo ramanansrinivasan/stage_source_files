@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">UKWWHDSQLWI099</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAPGe9VhrMcEWsGGBCFWDR2AAAAAACAAAAAAADZgAAwAAAABAAAAD4a8uqLgeazjb6cBDfkw4bAAAAAASAAACgAAAAEAAAAK8yko98qa1t/r3ici+32yqIAAAA7W6bg/IeuBqH4/e8UyP1lt/rl3rP9PdX52+mkE2NphEmKOoIzpo7TgCffhyZsoj3rCvwW0w5TenxIKEYUQX8xEKID3vq3wRdOt1k3eUYf4NHxp5qzSrebhRpRbZpx94rI2WBqeXVhlYxmkRdXbFM1lW9+TlGapAFDNAeJXfqj/bU8a9io0q13RQAAABkGWflAqy3bz2sAo2R8LF9uZQEOQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAUJfCzS892E+JlQpbJ2WtHgAAAAACAAAAAAADZgAAwAAAABAAAADfbg7MdbW155s2GW51k7mlAAAAAASAAACgAAAAEAAAAAKlOXcd6rc+svSwiAwd7neIAAAAmHvjrsFiMmonNGHsHPEvb1gH+HmwpEkhn9yAiuLykIy295pOWJZYkubPC3aIn82HhVafpoGDkAw0JuIZB6QqDM2Eb8p5h+dhXbhjci+LKSixbsU3lufc5PPbRvCiZA/Nrmj+Q0SVt4sDecmGWBSAnbjj3KklOX2IxJ9gGh03dwRg59Dq1MN2ghQAAAC+dIJpW/LZgcTKg+Sq37a3KU9Nxw==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -192,6 +192,21 @@
                 <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
+            <SSIS:Parameter SSIS:Name="CM.UKWWHDSQLWI099.VistaDB.ConnectionString">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="CreationName">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=UKWWHDSQLWI099;Initial Catalog=VistaDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-stage_source_files-{6516E543-A1C3-4FC0-BDDA-CCA172B687F8}UKWWHDSQLWI099.VistaDB;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+              </SSIS:Properties>
+            </SSIS:Parameter>
             <SSIS:Parameter SSIS:Name="CM.UKWWHDSQLWI099.VistaDB.ConnectRetryCount">
               <SSIS:Properties>
                 <SSIS:Property SSIS:Name="ID">
@@ -248,7 +263,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Test</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">VistaDB</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -318,10 +333,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">34</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">48</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{FA9D3BAD-DFAA-4353-8A39-3FC61EEAB31D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F7283A89-87C3-4101-B553-80CF2ECD6518}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -490,6 +505,8 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">
+                    </SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
