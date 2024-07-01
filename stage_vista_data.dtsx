@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="53"
-  DTS:VersionGUID="{536DB9E8-808E-4FC9-84B6-8D4AF3ECF47F}">
+  DTS:VersionBuild="54"
+  DTS:VersionGUID="{D89FD4DB-32C6-42FC-91C5-4BF5480C0227}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -12938,6 +12938,43 @@
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="134,42.6666666666667"
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet"
+          TopLeft="89.5416688739012,97.4210541641282" />
+        <NodeLayout
+          Size="173.333333333334,42.6666666666667"
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Truncate Awslocdet"
+          TopLeft="72.7499992363153,24.5263159311379" />
+        <EdgeLayout
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet.PrecedenceConstraints[Constraint 1]"
+          TopLeft="157.979167388442,67.1929825978046">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.2280715663236"
+              Start="0,0"
+              End="0,22.7280715663236">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.7280715663236" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="285.333333333334,272"
+          Size="285.333333333334,314.666666666667"
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet"
+          TopLeft="1012,98.6666666666667" />
+        <NodeLayout
+          Size="134,42.6666666666667"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr"
           TopLeft="78.2083355405679,99.4210541641282" />
         <NodeLayout
@@ -12969,7 +13006,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="285.333333333334,271.333333333334"
+          PanelSize="285.333333333334,272"
           Size="285.333333333334,314.666666666667"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr"
           TopLeft="658.833322343727,92.6140345596982" />
@@ -13086,6 +13123,43 @@
           Size="382.666666666667,42.6666666666667"
           Id="Package\Copy Vista Vendor data to Staging"
           TopLeft="579.791665875043,2.66666666666663" />
+        <NodeLayout
+          Size="170.666666666667,42.6666666666667"
+          Id="Package\Create vista_inventory table\Create vista_inventory table"
+          TopLeft="16.2222222222221,15.7777777777777" />
+        <NodeLayout
+          Size="138,42.6666666666667"
+          Id="Package\Create vista_inventory table\update run_status"
+          TopLeft="32.8888888888888,86.4444444444444" />
+        <EdgeLayout
+          Id="Package\Create vista_inventory table.PrecedenceConstraints[Constraint]"
+          TopLeft="101.722222222222,58.4444444444443">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.0000000000001"
+              Start="0,0"
+              End="0,20.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="213.333333333334,184.666666666667"
+          Size="213.333333333334,227.333333333334"
+          Id="Package\Create vista_inventory table"
+          TopLeft="810.222222222222,463.111111111111" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="373.145832080705,141.166666666666">
@@ -13130,43 +13204,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="134,42.6666666666667"
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet"
-          TopLeft="89.5416688739012,97.4210541641282" />
-        <NodeLayout
-          Size="173.333333333334,42.6666666666667"
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Truncate Awslocdet"
-          TopLeft="72.7499992363153,24.5263159311379" />
-        <EdgeLayout
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet.PrecedenceConstraints[Constraint 1]"
-          TopLeft="157.979167388442,67.1929825978046">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,30.2280715663236"
-              Start="0,0"
-              End="0,22.7280715663236">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,22.7280715663236" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="285.333333333334,271.333333333334"
-          Size="285.333333333334,314.666666666667"
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet"
-          TopLeft="1012,98.6666666666667" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="944.16665567706,252.973683946516">
@@ -13189,43 +13226,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="170.666666666667,42.6666666666667"
-          Id="Package\Create vista_inventory table\Create vista_inventory table"
-          TopLeft="16.2222222222221,15.7777777777777" />
-        <NodeLayout
-          Size="138,42.6666666666667"
-          Id="Package\Create vista_inventory table\update run_status"
-          TopLeft="32.8888888888888,86.4444444444444" />
-        <EdgeLayout
-          Id="Package\Create vista_inventory table.PrecedenceConstraints[Constraint]"
-          TopLeft="101.722222222222,58.4444444444443">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,28.0000000000001"
-              Start="0,0"
-              End="0,20.5000000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.5000000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="213.333333333334,184"
-          Size="213.333333333334,227.333333333334"
-          Id="Package\Create vista_inventory table"
-          TopLeft="810.222222222222,463.111111111111" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="1154.66666666667,413.333333333333">
@@ -13263,6 +13263,70 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="113.333333333334,42.6666666666667"
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\Awslocdet"
+          TopLeft="721.666666666667,181.5" />
+        <NodeLayout
+          Size="149.333333333334,42.6666666666667"
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\Read Awslocdet data"
+          TopLeft="189.5,177.5" />
+        <NodeLayout
+          Size="182.666666666667,42.6666666666667"
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\attach run_id on source records"
+          TopLeft="417.533333333333,179.766666666667" />
+        <EdgeLayout
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet.Paths[OLE DB Source Output]"
+          TopLeft="338.833333333333,199.966666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.6999999999998,0"
+              Start="0,0"
+              End="71.1999999999998,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="71.1999999999998,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet.Paths[Derived Column Output]"
+          TopLeft="600.2,201.966666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="121.466666666667,0"
+              Start="0,0"
+              End="113.966666666667,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="113.966666666667,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <TaskHost
     design-time-name="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr">
     <LayoutInfo>
@@ -13327,6 +13391,32 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr\Read Awslochdr data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr\Awslochdr">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Copy Vista Inventory Data to Staging - Awstitloc\Stage Awstitloc">
     <LayoutInfo>
@@ -13638,96 +13728,6 @@
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Copy Vista Vendor data to Staging\Stage Vista Vendors\Read Vista Source Vendors">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr\Read Awslochdr data">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="113.333333333334,42.6666666666667"
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\Awslocdet"
-          TopLeft="721.666666666667,181.5" />
-        <NodeLayout
-          Size="149.333333333334,42.6666666666667"
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\Read Awslocdet data"
-          TopLeft="189.5,177.5" />
-        <NodeLayout
-          Size="182.666666666667,42.6666666666667"
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\attach run_id on source records"
-          TopLeft="417.533333333333,179.766666666667" />
-        <EdgeLayout
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet.Paths[OLE DB Source Output]"
-          TopLeft="338.833333333333,199.966666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="78.6999999999998,0"
-              Start="0,0"
-              End="71.1999999999998,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="71.1999999999998,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet.Paths[Derived Column Output]"
-          TopLeft="600.2,201.966666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="121.466666666667,0"
-              Start="0,0"
-              End="113.966666666667,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="113.966666666667,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr\Awslochdr">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
