@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{8FEFD641-54AA-4AF9-BF46-029B7A28343B}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{13F61DA0-14B5-49F9-ADE5-E688A04A768E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -217,596 +217,434 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="8000"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="errors"
-              DTS:DTSID="{603062DD-ED15-4440-92A2-8437118C5A5E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="dwnld_info"
-              DTS:DTSID="{2690323C-372B-4155-B3F6-136DFD5F7BF2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
               DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="event_prtnum"
-              DTS:DTSID="{DEFDAB10-B9FF-4ED6-B2A4-C204E153E0E1}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Event Data Sequence"
-              DTS:DTSID="{7FA05527-751B-4349-A7B3-D69D92868DC4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Event Status"
-              DTS:DTSID="{EB6032FD-0940-4F14-86E2-EEF59D919B0E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EO Data Sequence"
-              DTS:DTSID="{A91360FE-CD8A-4D9B-B055-78EA53F1BED2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EO Data Detail Sequence"
-              DTS:DTSID="{752997DB-1BBC-4799-9360-7E6D18383A1E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="parent"
-              DTS:DTSID="{5FD1A1CE-7D57-454E-974F-5AB92DB91807}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EO Segment"
-              DTS:DTSID="{17ADDD6A-F76F-4B10-A310-A5AF053E29C3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="EO Field"
-              DTS:DTSID="{A5B0A963-E0CA-45AB-B9AB-0F05355AF7B3}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Data Type"
-              DTS:DTSID="{87D5233B-F684-4767-869F-B1911671D526}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Value"
-              DTS:DTSID="{CA3C3814-0D5B-47B5-82EC-28528CCC90E0}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ol_flg"
-              DTS:DTSID="{25F57F77-2BA2-44BF-9C1C-C48B2EE0432E}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="return_as_projection"
-              DTS:DTSID="{8CF9937F-6CE0-4677-9120-EB5ECC420348}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Download Sequence"
-              DTS:DTSID="{066CB52A-857B-476F-B735-256418F86C72}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Inserted Date"
-              DTS:DTSID="{259E5A53-7172-4D7A-8D65-647B10A8AD49}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Last Updated Date"
-              DTS:DTSID="{9E96EC79-D83D-4EEB-8675-1CC08A021A56}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="evt_dt"
-              DTS:DTSID="{722A9F8F-5A96-4659-ABCA-245EC4FF7439}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ISBN - Supply Edition"
-              DTS:DTSID="{8FC6AFB1-3DED-4A6A-B5A1-6D05602236AF}"
+              DTS:DTSID="{BECADA40-89C2-4E70-9B7F-5886CF6DE678}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ISBN"
-              DTS:DTSID="{83229D28-92E3-459D-B04E-50FD708F9BEC}"
+              DTS:DTSID="{2FD2E6A2-19FC-495E-969E-D0B7F3FC521D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Author"
-              DTS:DTSID="{6C1DE15A-008A-47E9-B392-7BF621E3B9E7}"
+              DTS:DTSID="{86F11499-4774-47A1-B23E-20E78A1E1DC9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Imprint"
-              DTS:DTSID="{168C501D-7B4C-4F6D-A375-7EC1E987CD2F}"
+              DTS:DTSID="{3116AB55-DE36-483A-865A-25F603706EA6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Publisher"
-              DTS:DTSID="{E24FB424-033C-4277-9F51-B290FCA80B48}"
+              DTS:DTSID="{9EBC154A-13E4-4E1A-9CF0-EFEBF6339BCD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Item Number"
-              DTS:DTSID="{79013E15-2886-4BA6-81C4-024D2D98603C}"
+              DTS:DTSID="{A0619EDE-25AF-43A4-9DA6-AD7051A506D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Commodity Code"
-              DTS:DTSID="{6B7EA71A-FE03-4DFE-8C97-7C33212F21E8}"
+              DTS:DTSID="{8B8BF206-85CB-4EB6-BBBC-0D0C81A715CB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Item Family"
-              DTS:DTSID="{C4489AA2-8967-4432-8129-5EE1101607E4}"
+              DTS:DTSID="{77296FB6-4987-466C-933A-510659849D8F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Unit Cost"
-              DTS:DTSID="{2E5BFD54-93EA-4EE3-8821-55741837338C}"
+              DTS:DTSID="{32CA9C88-D31F-44B8-9905-D5138D373774}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Receive Status"
-              DTS:DTSID="{31F22D7C-E8DF-47E9-934B-C621D74F43EA}"
+              DTS:DTSID="{492D3C6D-2C2E-4551-9024-8B3DEA8B9027}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Production Inventory"
-              DTS:DTSID="{B048D9EF-529E-4C1D-B019-4B469CB575E0}"
+              DTS:DTSID="{0F33AF71-A543-45D3-BE78-FEB081F18E7A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Size"
-              DTS:DTSID="{D60A4074-74E4-4FD4-8472-3CA2B3894DFF}"
+              DTS:DTSID="{82FE1A86-02DA-4B2A-9A8D-5E35D96A254B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Currency Code"
-              DTS:DTSID="{45E8021D-0A9C-4DB5-9C9B-F47CFC9520EC}"
+              DTS:DTSID="{9EC285C4-5915-484E-8D90-2AD99276BA6D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Display Item Number"
-              DTS:DTSID="{D4B5F1B3-BA03-4D1E-8449-ADCC15471D66}"
+              DTS:DTSID="{B8FA4B00-CDB4-4D40-8323-D1A80E1B5E58}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Item Hierarchy"
-              DTS:DTSID="{BA5DD837-C500-4491-B5AE-F82867D53BA5}"
+              DTS:DTSID="{FBD6814B-97E6-45B3-B5D0-5ABE3C256256}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="5000"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Description"
-              DTS:DTSID="{C6CD24BF-5CA6-4532-B266-C0D8AF7CE54A}"
+              DTS:DTSID="{358C97BE-7D40-4D53-AC8E-E3C0D5AEACC7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Alternate Item Type"
-              DTS:DTSID="{F026A850-A82B-4E8C-B45A-22EB96873FE8}"
+              DTS:DTSID="{181433E7-390D-49E7-B18C-2D4D09533D9A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Alternate Item Number"
-              DTS:DTSID="{BC0A3FE2-30BF-4092-92A8-BC8695521747}"
+              DTS:DTSID="{64BF7620-57A4-451F-98AE-FC770FD78CFC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Footprint Code"
-              DTS:DTSID="{3DF078E4-DC40-4E93-A480-397FAD6BACAB}"
+              DTS:DTSID="{E343FBBF-9B0A-43CD-B880-DF29F4AD39EA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ftp_lngdsc"
-              DTS:DTSID="{80EFE82C-D897-4299-8C4E-B5C7609BD2FA}"
+              DTS:DTSID="{A483C478-7998-4994-92D9-AEEC6E64E5BD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Cases per Tier"
-              DTS:DTSID="{ABADB545-827B-49F9-B0FE-7DB2F4C8D3FE}"
+              DTS:DTSID="{001F9170-592B-45A5-B86F-76DFCFF091F4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Default Item Footprint"
-              DTS:DTSID="{6548B24A-BD41-45FB-9214-32BCED334449}"
+              DTS:DTSID="{32BCF931-29D1-436A-9ACD-7F1127389E88}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_uomcod"
-              DTS:DTSID="{DD928EFE-DEAE-4B90-A95A-04B02C8CC3D7}"
+              DTS:DTSID="{170A97FE-76A3-4B42-95C8-048B2E924EBA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_len"
-              DTS:DTSID="{F28B3719-5340-41C9-96ED-4B8758DE23C9}"
+              DTS:DTSID="{76AF8170-A129-46DD-A4B0-6343A637D081}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_wid"
-              DTS:DTSID="{D7FE8762-B72D-4FC9-94C5-FF7CDA5F1101}"
+              DTS:DTSID="{432DF7C0-6D86-45A3-9FA1-057D9F894D8B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_hgt"
-              DTS:DTSID="{EE5C1C12-E336-4DBB-A532-16371CB0DA44}"
+              DTS:DTSID="{90D20546-C55F-4DF9-8915-07D34AC62337}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_grswgt"
-              DTS:DTSID="{EC9D4C1B-80C7-46D5-B2FE-7DF7A195137A}"
+              DTS:DTSID="{4EF33C88-5055-4434-A91E-97760105283A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_netwgt"
-              DTS:DTSID="{A791B6B9-D830-4D11-AC83-757B4E3C72CB}"
+              DTS:DTSID="{CA6F8EC5-CB4B-4AAD-9DA4-ED96785B8E7B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_pal_flg"
-              DTS:DTSID="{3E414882-1B9D-467C-B3BE-D1362A4A6724}"
+              DTS:DTSID="{A3C464E1-C23C-4E40-8A64-7D426E33ED4E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_cas_flg"
-              DTS:DTSID="{9E3C5286-584D-402B-9742-31449671E82A}"
+              DTS:DTSID="{2D90A479-35C0-4A4C-AB8A-B6AC312EE9C7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_pak_flg"
-              DTS:DTSID="{84559319-FB8E-4AAE-9D20-27E69BEC4924}"
+              DTS:DTSID="{2DE761EA-D4F9-4AF8-BAC4-0D47848A699F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_stk_flg"
-              DTS:DTSID="{0DDE0C98-225D-4DE6-84CA-B4007DC9BC69}"
+              DTS:DTSID="{66F8C129-1104-48FC-B032-3E4DA98C4439}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_rcv_flg"
-              DTS:DTSID="{C80E15E0-B5D5-400C-9317-5A1B64D4A736}"
+              DTS:DTSID="{28B547F3-ADAC-4018-9510-D66D93CBE197}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_untqty"
-              DTS:DTSID="{38237FA4-414D-4340-9EF3-73F0346FD6ED}"
+              DTS:DTSID="{04DCC155-3E04-4CBD-8FB0-C2E972891A97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="each_thresh_pct"
-              DTS:DTSID="{105ACAC5-5B0F-49BD-84FB-A7BC1DED9034}"
+              DTS:DTSID="{9308C434-A951-40B2-8906-86BBE412DCEB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_uomcod"
-              DTS:DTSID="{BCF72B23-3420-4197-A1BE-E0A5970F4B02}"
+              DTS:DTSID="{9286533C-0B24-4A32-87EA-1734456677B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_len"
-              DTS:DTSID="{52D3BD67-8A6B-4F54-94D5-EEF4E41BDC5A}"
+              DTS:DTSID="{AB6C715B-4731-4B01-AABE-42A2A0D19BE1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_wid"
-              DTS:DTSID="{AD457288-454A-4132-A105-655DC80757E7}"
+              DTS:DTSID="{13222F82-B6FD-4E93-A6F0-DFE22310D531}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_hgt"
-              DTS:DTSID="{122ED79C-DDB9-49D0-BE00-D00424BEB9C3}"
+              DTS:DTSID="{5506A121-EDC7-4B65-AD0A-8040174738B3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_grswgt"
-              DTS:DTSID="{9890A484-50C5-40DF-B284-8288358631F6}"
+              DTS:DTSID="{6D17C937-C699-465D-A78A-CE04A1A0E14C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_netwgt"
-              DTS:DTSID="{9D53C684-6995-489F-97D2-ABFFCF785111}"
+              DTS:DTSID="{BB9E162A-B480-4442-9366-11153C4D8316}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_pal_flg"
-              DTS:DTSID="{A9223A1E-FBA8-41E2-8210-1F1CED992A66}"
+              DTS:DTSID="{EB59653C-B2C3-4895-A2A3-1ED5959099F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_cas_flg"
-              DTS:DTSID="{22530C65-99FA-466E-95E8-5BF41525AF19}"
+              DTS:DTSID="{12D60488-4AD3-4D69-82B0-10E2808F7F77}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_pak_flg"
-              DTS:DTSID="{7801E0F9-3F17-4185-A6D4-56809CADDCDC}"
+              DTS:DTSID="{C983FCBF-C220-4130-AF3C-E2C750D2E547}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_stk_flg"
-              DTS:DTSID="{AEDE3AEA-C5B7-4746-8AC4-2C2366E5CEDB}"
+              DTS:DTSID="{60F88A91-69D1-4616-A670-BA9A600233A3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_rcv_flg"
-              DTS:DTSID="{69D70498-C6AA-48B0-B39D-2C28AFCC2CA3}"
+              DTS:DTSID="{2C98FCFA-D1D4-49A4-BD62-149165A53717}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_untqty"
-              DTS:DTSID="{57E3FE25-7B55-4606-8855-A88E20FD3B39}"
+              DTS:DTSID="{C955A6C0-07CB-4B1B-91FF-8209D641EC1B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="case_thresh_pct"
-              DTS:DTSID="{283A4CE1-06F6-4EAF-859A-956F57E18D88}"
+              DTS:DTSID="{939B2AAE-F172-4226-8A0F-059CF6A3C166}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -815,115 +653,268 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_uomcod"
-              DTS:DTSID="{A63C8DAC-1BED-4496-BD39-001F16445DBC}"
+              DTS:DTSID="{0AC561FB-3115-4636-9FAC-68F4EFCF6D4A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_len"
-              DTS:DTSID="{18C1111B-5D54-4F2F-9935-15E9CF3A2C40}"
+              DTS:DTSID="{5ED885C5-03C1-4CC7-BD30-40F2EE7D8893}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_wid"
-              DTS:DTSID="{55C34379-ACDE-49B1-9438-F889CE1F87D7}"
+              DTS:DTSID="{8E72120C-A5AF-41AB-B3B3-0FFDA3418294}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_hgt"
-              DTS:DTSID="{9CC4B2AC-108E-44CE-8089-778F72D0261D}"
+              DTS:DTSID="{B4509FB6-FF19-4201-84F4-C13DBC4C92DB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_grswgt"
-              DTS:DTSID="{B3883C12-9840-4549-A9AD-A99AD55E36C5}"
+              DTS:DTSID="{3E60CFF2-C868-4C22-9C85-C586EACD1596}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_netwgt"
-              DTS:DTSID="{3988E71B-D65D-4F68-8153-874D1813601D}"
+              DTS:DTSID="{1DB8C1D3-2A6B-4D9C-BF21-18F8B06BAFF6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_pal_flg"
-              DTS:DTSID="{EE04B985-2E38-456A-9E0B-19E033467231}"
+              DTS:DTSID="{0FD2CB2A-40A4-4DF3-8B1A-CC692466ABA4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_cas_flg"
-              DTS:DTSID="{3191C4DB-861B-4FC4-AD5D-8426A6178E21}"
+              DTS:DTSID="{C427628C-88F1-4101-B067-A4C91D95EDA9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_pak_flg"
-              DTS:DTSID="{349BC97E-03CE-4608-B513-09E79D2E3ADC}"
+              DTS:DTSID="{D44EBFF1-EACE-4B60-9F22-FDD5CC27F377}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_stk_flg"
-              DTS:DTSID="{FB58C001-B98C-4861-8EC8-217FDF3E9D7A}"
+              DTS:DTSID="{79D71D96-BE40-4B2A-8561-E6833043C5F3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_rcv_flg"
-              DTS:DTSID="{FEAC3381-2886-4AB5-9827-9DDCB73D830F}"
+              DTS:DTSID="{EE4AC252-18FE-4B3F-AD8E-F23DAB23C4AD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pallet_untqty"
-              DTS:DTSID="{F3A50F04-8423-4BCC-B00B-F82419F9C4E2}"
+              DTS:DTSID="{3578D4A6-9663-4942-B47A-0E8FB07F328C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="pallet_thresh_pct"
+              DTS:DTSID="{FFA1AB61-C008-421A-A09B-22114DE6D4A2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dwnld_info"
+              DTS:DTSID="{44BA26A7-61D0-491B-BFF6-C5B8E34CC339}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="event_prtnum"
+              DTS:DTSID="{D9AC4CE7-3CB6-497C-9BF0-C29C56E7E3B8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Event Data Sequence"
+              DTS:DTSID="{1D3E61CB-C49F-4372-A005-D8E39D95CB99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Event Status"
+              DTS:DTSID="{4B6DEC83-1B4F-4C71-BBC7-4F503C26AE83}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EO Data Sequence"
+              DTS:DTSID="{30E397C9-B713-4EC2-84EC-4FBFC2BDB62D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EO Data Detail Sequence"
+              DTS:DTSID="{F02F58B3-894E-4216-8F63-5B7EBC66010F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="parent"
+              DTS:DTSID="{B27199D7-AEAD-4A5B-88A8-125029A2119F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EO Segment"
+              DTS:DTSID="{4E79DFF0-3547-4CCD-979D-05F1E808236A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EO Field"
+              DTS:DTSID="{BD201055-AB90-42BE-B79B-9ADF801CC0B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Data Type"
+              DTS:DTSID="{6069DFBA-E36F-4D82-A929-EAC6993D6DB7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Value"
+              DTS:DTSID="{A3D8DE1C-A749-4749-95D2-0DB34717F020}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ol_flg"
+              DTS:DTSID="{3DD81822-D43C-45D5-BFEB-B7EA27658235}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="return_as_projection"
+              DTS:DTSID="{113C2275-8485-4939-A4AA-5A56BFC49D1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Download Sequence"
+              DTS:DTSID="{0646AE25-3668-4B47-AA6B-E565FE3FC072}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Inserted Date"
+              DTS:DTSID="{759968B7-AFE0-4DE4-903C-57C7122BA445}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last Updated Date"
+              DTS:DTSID="{ACA87162-A657-4DFC-8141-120072BB01DE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="pallet_thresh_pct"
-              DTS:DTSID="{0C7C6290-85D1-4650-B079-A13F772F2BBC}"
+              DTS:ObjectName="evt_dt"
+              DTS:DTSID="{EAEECA9E-BCDD-453D-BC15-38030FB0E66B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -952,7 +943,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Supplier Number"
-              DTS:DTSID="{0F546F15-217B-4A08-9191-862B1F631BB3}"
+              DTS:DTSID="{E38879EE-FF68-4CD6-A50B-C313A6572B9A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -961,430 +952,421 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Host External ID"
-              DTS:DTSID="{4A882BBA-EC63-481E-BCBA-7B8FD9EC234F}"
+              DTS:DTSID="{3C1DAF1D-0A04-4AD3-BC3C-99C00A6FD371}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Name"
-              DTS:DTSID="{B179A4CA-31DC-4DD5-B6C3-F1953BCE45D4}"
+              DTS:DTSID="{D3D86082-18E1-4358-8B89-93DC41E92797}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Type"
-              DTS:DTSID="{FF59A4D8-1CBB-4AE9-8475-B2CA269F6556}"
+              DTS:DTSID="{8B1ADB0D-5C06-42B2-8E3C-0DCBDCEF2808}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Line 1"
-              DTS:DTSID="{83132E98-7780-4B80-84D3-81EA7C8CD4F1}"
+              DTS:DTSID="{EB6AAE07-A16A-4CB8-9638-721B2183BA9D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Line 2"
-              DTS:DTSID="{EC71239E-D69C-4190-BDE8-9F8722E55E5F}"
+              DTS:DTSID="{FCFD65EF-A2DC-4260-9C5D-ED65EB5C2ADA}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Address Line 3"
-              DTS:DTSID="{7A440C53-C703-4945-9861-A0FC9215DCEE}"
+              DTS:DTSID="{7CFFB49D-E771-4FCE-80A9-94197CFA166A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{E318D7EB-AD72-40F9-8C86-83108559F353}"
+              DTS:DTSID="{32F9F0D7-B3C7-4572-8E77-0E3A178175FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="State"
-              DTS:DTSID="{5D34DABE-08D0-47D6-8657-1A102AFE553C}"
+              DTS:DTSID="{BA07A40D-7263-472A-9B67-C38AD5BDC865}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Postal Code"
-              DTS:DTSID="{14CC8EC1-F70B-4E7D-85F4-385996B865C2}"
+              DTS:DTSID="{1B9CA5F1-9A93-446E-9682-483DE1A23835}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country Name"
-              DTS:DTSID="{37A098C4-0E0D-408A-A38A-4C7144EDF2A4}"
+              DTS:DTSID="{60359223-A1F8-4A42-BCDD-D8BDB81B6264}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Region"
-              DTS:DTSID="{C4E0FF9E-E262-4C1F-BD33-C4BD98E207A0}"
+              DTS:DTSID="{60183F6C-8C4D-43E4-A808-DF5BA1185C07}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Receiving Phone"
-              DTS:DTSID="{A2F4C73C-1AE7-47CC-BFBC-ED795ECBF6E3}"
+              DTS:DTSID="{EBFBB804-D0DE-4F31-8B2F-C74B1284AFBC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Receiving Fax"
-              DTS:DTSID="{BE7FF9EA-F1E7-41F6-8227-D2CAAAB54808}"
+              DTS:DTSID="{5F26F644-7C7D-4716-90FD-877142BCFFF0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Residential Address"
-              DTS:DTSID="{B2789C05-E6A3-4585-BEB5-748D4111B0C7}"
+              DTS:DTSID="{1D599B2D-E38E-4485-A2B0-742BCFD08F02}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Temporary"
-              DTS:DTSID="{4C891F60-B4DF-43E3-8E76-0F4B5EC59180}"
+              DTS:DTSID="{14EC29C3-39F7-4614-BEB3-90A215E8311B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Name"
-              DTS:DTSID="{58173B14-6FF3-481B-9CFC-311E8F6644D0}"
+              DTS:DTSID="{4E4AA7BA-8B73-4A31-A0F2-707EC5991502}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="First Name"
-              DTS:DTSID="{ED9A2D55-17B0-464A-86ED-DC7A55984A84}"
+              DTS:DTSID="{40D96D56-58BF-4331-83D6-CFD1E0CA4299}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Honorific"
-              DTS:DTSID="{69C47085-742F-4AF5-80EC-CC63F4DCB86E}"
+              DTS:DTSID="{2D0DDD8F-CDAD-43C5-B3D0-21A161005599}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Address District"
-              DTS:DTSID="{34E2DA72-EFA4-4771-A95D-6D1A885D627D}"
+              DTS:DTSID="{D1114838-12B6-4ECD-9BD1-84FC9F6AC9DB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Receiving Web Address"
-              DTS:DTSID="{8C294B79-1DBA-4C76-8985-6BC09CC14032}"
+              DTS:DTSID="{51256E33-53EB-4431-9FE5-5698B52F5AE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Receiving Email"
-              DTS:DTSID="{DFAB5029-9D70-4714-943A-BEA026AC721F}"
+              DTS:DTSID="{E54E5739-ABEB-4F51-B80B-8F9011C5EFFF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pagnum"
-              DTS:DTSID="{C36A998A-F20E-4043-B7F7-279A09047C0D}"
+              DTS:DTSID="{A939C5EE-3382-4F44-8975-A509ACD5CC90}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Locale ID"
-              DTS:DTSID="{BD2A8791-CECC-48E3-AA4F-E2E5198882F1}"
+              DTS:DTSID="{C54ED15B-13AF-406A-9127-3D9C84C1BB91}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="P O  Box Address"
-              DTS:DTSID="{E92880EE-6BF8-46AA-A254-EA3F1BF8B0BB}"
+              DTS:DTSID="{D9B774B9-6559-4DA0-BEF4-4A3B1D4DCAED}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Handling Unit Type"
-              DTS:DTSID="{C40D3FCB-A14B-46AC-9555-8F1997CBE6ED}"
+              DTS:DTSID="{0C334948-DA81-44F7-988E-1F123AA47C00}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Receive Status"
-              DTS:DTSID="{8137614E-91CD-4B08-BAF6-F66DA4606183}"
+              DTS:DTSID="{80EFE9A4-A6F7-49D3-925C-D6A2B29AEE7B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Lot Format ID"
-              DTS:DTSID="{179490B5-3239-4C41-BC5D-1477EBFFF5DF}"
+              DTS:DTSID="{EE6868A6-A345-4406-9295-04B9C7A27840}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Serial Number Type ID"
-              DTS:DTSID="{EC7000E0-78DE-4C52-881F-75DBC053FB26}"
+              DTS:DTSID="{8A582695-7D64-4B40-B4E4-1886265BC436}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="autorcv_flg"
-              DTS:DTSID="{D7E87742-D3FD-438F-9ED1-C7B166D1D223}"
+              DTS:DTSID="{14D64CD4-E9D0-4821-8621-494D85BF4C68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Trusted"
-              DTS:DTSID="{24FB7DA1-36EC-4FE5-AC8D-34289685FA01}"
+              DTS:DTSID="{2FFB7641-E9AD-40E7-A627-4D1445C3BF8C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dwnld_info"
-              DTS:DTSID="{E2E9C55D-0960-4868-A224-41DB6E669993}"
+              DTS:DTSID="{A11DCBD2-7D1C-4DA4-8D34-D752B7E1D6C4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="event_supnum"
-              DTS:DTSID="{EEC2B6DF-B270-4D16-B766-E42E7396C027}"
+              DTS:DTSID="{4084060A-0227-422A-AD9C-197AF57FB56F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Event Data Sequence"
-              DTS:DTSID="{E8DA2073-221F-4B34-8430-153343FB6C1B}"
+              DTS:DTSID="{15C57CD6-E291-4A10-9133-87EB7795A2F8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Event Status"
-              DTS:DTSID="{E67A64B2-D542-4456-868E-4FFD381F4B8C}"
+              DTS:DTSID="{3DBB0B5C-171C-4F19-8A20-1CD7F48211EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EO Data Sequence"
-              DTS:DTSID="{215D84A1-6BE8-454D-81B4-432B00958994}"
+              DTS:DTSID="{FFEF76D8-A93F-4F7E-A182-8B444FE85F8B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EO Data Detail Sequence"
-              DTS:DTSID="{9E0EC124-8998-4E36-8288-8C7A9C56F8A2}"
+              DTS:DTSID="{1FA840A4-865D-4B15-A2BC-EA881DB332B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="parent"
-              DTS:DTSID="{039E47DA-1E7B-4A47-9CBA-AF21C84B62F1}"
+              DTS:DTSID="{F13DB329-A2F4-45F6-84C5-43F990129DA7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EO Segment"
-              DTS:DTSID="{D9F18389-C159-46E2-9BA4-3A609E488977}"
+              DTS:DTSID="{3E687EA7-75E7-4CEF-9D17-8F7ECB031458}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="EO Field"
-              DTS:DTSID="{AAC0085C-C6F7-40A2-BF09-62A614FEEAF5}"
+              DTS:DTSID="{DB106640-9EE9-4A80-80F4-A7D2771E77B5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Data Type"
-              DTS:DTSID="{5E758A0D-2F89-42CD-AFD9-CCC43B4300D6}"
+              DTS:DTSID="{32268A94-C2F6-4AA6-AA07-0C7BC4C8EEC4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Value"
-              DTS:DTSID="{7C7EC1EC-DCEA-4ABC-BFCD-3EAA2528CFDF}"
+              DTS:DTSID="{37D187F7-75F6-48E8-A185-EBF8D60FFB7B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ol_flg"
-              DTS:DTSID="{69EF4CA2-E947-4D68-A823-365EF34A789A}"
+              DTS:DTSID="{380EA66D-49FF-4F04-9D76-2292851F35E7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="return_as_projection"
-              DTS:DTSID="{B66C757A-0EE5-47F1-95A4-F602A478D1D1}"
+              DTS:DTSID="{C91E1498-C118-488C-9588-85115B46A054}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Download Sequence"
-              DTS:DTSID="{A4371752-2270-49F8-A7C5-BD02B4B1F771}"
+              DTS:DTSID="{D44EFE56-C621-4F4D-B00B-BBB614B6AD78}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Inserted Date"
-              DTS:DTSID="{41B26062-64C4-4C8A-B39F-67969A0CD620}"
+              DTS:DTSID="{007362B1-335B-4A91-8490-D89167F4791C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Last Updated Date"
-              DTS:DTSID="{04A9ABB0-4412-4997-A002-2AD0D30A6C5A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="500"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="evt_dt"
-              DTS:DTSID="{39F35730-A1C8-4F67-8C9B-9BAABEB43DD3}"
+              DTS:DTSID="{F2B2D42F-E551-428A-A674-E8284E976F3F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="500"
+              DTS:MaximumWidth="50"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="errors"
-              DTS:DTSID="{D9710992-E6D5-49C0-8CBC-C24B76BD0F4E}"
+              DTS:ObjectName="evt_dt"
+              DTS:DTSID="{351CEB2B-B385-4B78-B47B-782AF5B66EFA}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -2435,28 +2417,6 @@
                       refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output]"
                       name="Flat File Source Output">
                       <outputColumns>
-                        <outputColumn
-                          refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[errors]"
-                          codePage="1252"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[errors]"
-                          length="8000"
-                          lineageId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[errors]"
-                          name="errors"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
                         <outputColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[dwnld_info]"
                           codePage="1252"
@@ -4177,16 +4137,10 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[errors]"
-                          codePage="1252"
-                          dataType="str"
-                          length="8000"
-                          name="errors" />
-                        <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[dwnld_info]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="dwnld_info" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[event_prtnum]"
@@ -4228,349 +4182,349 @@
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[EO Segment]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="EO Segment" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[EO Field]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="EO Field" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Data Type]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Data Type" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Value]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Value" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[ol_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="ol_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[return_as_projection]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="return_as_projection" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Download Sequence]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Download Sequence" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Inserted Date]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Inserted Date" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Last Updated Date]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Last Updated Date" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[evt_dt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="evt_dt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[ISBN - Supply Edition]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="ISBN - Supply Edition" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="ISBN" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Author]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Author" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Imprint]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Imprint" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Publisher]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Publisher" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Item Number]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Item Number" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Commodity Code]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Commodity Code" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Item Family]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Item Family" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Unit Cost]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Unit Cost" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Receive Status]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Receive Status" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Production Inventory]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Production Inventory" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Size]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Size" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Currency Code]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Currency Code" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Display Item Number]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Display Item Number" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Item Hierarchy]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Item Hierarchy" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Description]"
                           codePage="1252"
                           dataType="str"
-                          length="5000"
+                          length="50"
                           name="Description" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Alternate Item Type]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Alternate Item Type" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Alternate Item Number]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Alternate Item Number" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Footprint Code]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Footprint Code" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[ftp_lngdsc]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="ftp_lngdsc" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Cases per Tier]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Cases per Tier" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Default Item Footprint]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Default Item Footprint" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_uomcod]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_uomcod" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_len]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_len" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_wid]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_wid" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_hgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_hgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_grswgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_grswgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_netwgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_netwgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_pal_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_pal_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_cas_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_cas_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_pak_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_pak_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_stk_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_stk_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_rcv_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_rcv_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_untqty]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_untqty" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[each_thresh_pct]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="each_thresh_pct" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_uomcod]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_uomcod" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_len]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_len" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_wid]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_wid" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_hgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_hgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_grswgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_grswgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_netwgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_netwgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_pal_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_pal_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_cas_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_cas_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_pak_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_pak_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_stk_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_stk_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_rcv_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_rcv_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_untqty]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_untqty" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[case_thresh_pct]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="case_thresh_pct" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_uomcod]"
@@ -4582,73 +4536,73 @@
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_len]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_len" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_wid]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_wid" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_hgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_hgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_grswgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_grswgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_netwgt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_netwgt" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_pal_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_pal_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_cas_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_cas_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_pak_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_pak_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_stk_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_stk_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_rcv_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_rcv_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_untqty]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_untqty" />
                         <externalMetadataColumn
                           refId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pallet_thresh_pct]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pallet_thresh_pct" />
                       </externalMetadataColumns>
                     </output>
@@ -4753,14 +4707,6 @@
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
-                        <inputColumn
-                          refId="Package\Load Title Results\Load from file\title_load_results.Inputs[OLE DB Destination Input].Columns[errors]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="8000"
-                          cachedName="errors"
-                          externalMetadataColumnId="Package\Load Title Results\Load from file\title_load_results.Inputs[OLE DB Destination Input].ExternalColumns[errors]"
-                          lineageId="Package\Load Title Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[errors]" />
                         <inputColumn
                           refId="Package\Load Title Results\Load from file\title_load_results.Inputs[OLE DB Destination Input].Columns[dwnld_info]"
                           cachedCodepage="1252"
@@ -5985,28 +5931,6 @@
                       name="Flat File Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[errors]"
-                          codePage="1252"
-                          dataType="str"
-                          errorOrTruncationOperation="Conversion"
-                          errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[errors]"
-                          length="8000"
-                          lineageId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[errors]"
-                          name="errors"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                              name="FastParse">false</property>
-                            <property
-                              dataType="System.Boolean"
-                              description="Indicates whether the data is in binary format."
-                              name="UseBinaryFormat">false</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[dwnld_info]"
                           codePage="1252"
                           dataType="str"
@@ -7066,112 +6990,106 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[errors]"
-                          codePage="1252"
-                          dataType="str"
-                          length="500"
-                          name="errors" />
-                        <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[dwnld_info]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="dwnld_info" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Event Data Sequence]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Event Data Sequence" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Event Status]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Event Status" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[EO Data Sequence]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="EO Data Sequence" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[EO Data Detail Sequence]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="EO Data Detail Sequence" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[parent]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="parent" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[EO Segment]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="EO Segment" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[EO Field]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="EO Field" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Data Type]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Data Type" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Value]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Value" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[ol_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="ol_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[return_as_projection]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="return_as_projection" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Download Sequence]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Download Sequence" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Inserted Date]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Inserted Date" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Last Updated Date]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Last Updated Date" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[evt_dt]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="evt_dt" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Receive Status]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Receive Status" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Supplier Number]"
@@ -7189,175 +7107,175 @@
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Address Name]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Address Name" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Address Type]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Address Type" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Address Line 1]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Address Line 1" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Address Line 2]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Address Line 2" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Address Line 3]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Address Line 3" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[City]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="City" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[State]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="State" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Postal Code]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Postal Code" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Country Name]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Country Name" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Region]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Region" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Receiving Phone]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Receiving Phone" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Receiving Fax]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Receiving Fax" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Residential Address]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Residential Address" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Temporary]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Temporary" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Last Name]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Last Name" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[First Name]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="First Name" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Honorific]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Honorific" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Address District]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Address District" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Receiving Web Address]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Receiving Web Address" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Receiving Email]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Receiving Email" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[pagnum]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="pagnum" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Locale ID]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Locale ID" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[P O  Box Address]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="P O  Box Address" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Handling Unit Type]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Handling Unit Type" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Lot Format ID]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Lot Format ID" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Serial Number Type ID]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Serial Number Type ID" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[autorcv_flg]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="autorcv_flg" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[Trusted]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="Trusted" />
                         <externalMetadataColumn
                           refId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].ExternalColumns[event_supnum]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="50"
                           name="event_supnum" />
                       </externalMetadataColumns>
                     </output>
@@ -7462,14 +7380,6 @@
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
-                        <inputColumn
-                          refId="Package\Load Vendor Results\Load from file\vendor_load_results.Inputs[OLE DB Destination Input].Columns[errors]"
-                          cachedCodepage="1252"
-                          cachedDataType="str"
-                          cachedLength="8000"
-                          cachedName="errors"
-                          externalMetadataColumnId="Package\Load Vendor Results\Load from file\vendor_load_results.Inputs[OLE DB Destination Input].ExternalColumns[errors]"
-                          lineageId="Package\Load Vendor Results\Load from file\Read CSV.Outputs[Flat File Source Output].Columns[errors]" />
                         <inputColumn
                           refId="Package\Load Vendor Results\Load from file\vendor_load_results.Inputs[OLE DB Destination Input].Columns[dwnld_info]"
                           cachedCodepage="1252"
@@ -8250,13 +8160,50 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="205.333333333334,42.6666666666667"
-          Id="Package\Load Title Results\Truncate title_load_results"
+          Size="144,42.6666666666667"
+          Id="Package\Load Inventory Results\Load from file"
+          TopLeft="67.8333310609065,140.33333749311" />
+        <NodeLayout
+          Size="232,42.6666666666667"
+          Id="Package\Load Inventory Results\Truncate inventory_load_results"
           TopLeft="29.0833316383263,19.2280720557092" />
+        <EdgeLayout
+          Id="Package\Load Inventory Results.PrecedenceConstraints[Constraint]"
+          TopLeft="142.458331349616,61.8947387223759">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78.4385987707341"
+              Start="0,0"
+              End="0,70.9385987707341">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.9385987707341" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="266,238.666666666667"
+          Size="266,281.333333333334"
+          Id="Package\Load Inventory Results"
+          TopLeft="702.499989531934,38.3157901948839" />
         <NodeLayout
           Size="144,42.6666666666667"
           Id="Package\Load Title Results\Load from file"
           TopLeft="59.0833311912914,140.33333749311" />
+        <NodeLayout
+          Size="205.333333333334,42.6666666666667"
+          Id="Package\Load Title Results\Truncate title_load_results"
+          TopLeft="29.0833316383263,19.2280720557092" />
         <EdgeLayout
           Id="Package\Load Title Results.PrecedenceConstraints[Constraint]"
           TopLeft="131.416664748142,61.8947387223759">
@@ -8282,7 +8229,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="298.666666666667,240"
+          PanelSize="298.666666666667,240.666666666667"
           Size="298.666666666667,283.333333333334"
           Id="Package\Load Title Results"
           TopLeft="84.9999987334013,38.3157901948839" />
@@ -8319,47 +8266,10 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="255.333333333334,237.333333333334"
+          PanelSize="255.333333333334,238"
           Size="255.333333333334,280.666666666667"
           Id="Package\Load Vendor Results"
           TopLeft="415.958331088846,36.9473691164951" />
-        <NodeLayout
-          Size="144,42.6666666666667"
-          Id="Package\Load Inventory Results\Load from file"
-          TopLeft="67.8333310609065,140.33333749311" />
-        <NodeLayout
-          Size="232,42.6666666666667"
-          Id="Package\Load Inventory Results\Truncate inventory_load_results"
-          TopLeft="29.0833316383263,19.2280720557092" />
-        <EdgeLayout
-          Id="Package\Load Inventory Results.PrecedenceConstraints[Constraint]"
-          TopLeft="142.458331349616,61.8947387223759">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,78.4385987707341"
-              Start="0,0"
-              End="0,70.9385987707341">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,70.9385987707341" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="266,238"
-          Size="266,281.333333333334"
-          Id="Package\Load Inventory Results"
-          TopLeft="702.499989531934,38.3157901948839" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="383.666665400068,178.63157965569">
@@ -8408,18 +8318,69 @@
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Load Title Results\Load from file">
+    design-time-name="Package\Load Inventory Results\Load from file">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="129.333333333334,42.6666666666667"
-          Id="Package\Load Title Results\Load from file\Read CSV"
+          Id="Package\Load Inventory Results\Load from file\Read CSV"
           TopLeft="105.624998426065,93.0526333304324" />
+        <NodeLayout
+          Size="186.666666666667,42.6666666666667"
+          Id="Package\Load Inventory Results\Load from file\inventory_load_results"
+          TopLeft="438.5,90.5" />
+        <EdgeLayout
+          Id="Package\Load Inventory Results\Load from file.Paths[Flat File Source Output]"
+          TopLeft="234.958331759398,113.10964999855">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="203.541668240602,0"
+              Start="0,0"
+              End="196.041668240602,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="196.041668240602,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Inventory Results\Load from file\inventory_load_results">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Load Title Results\Load from file">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="160,42.6666666666667"
           Id="Package\Load Title Results\Load from file\title_load_results"
           TopLeft="480.62499283813,94.4210544088211" />
+        <NodeLayout
+          Size="129.333333333334,42.6666666666667"
+          Id="Package\Load Title Results\Load from file\Read CSV"
+          TopLeft="105.624998426065,93.0526333304324" />
         <EdgeLayout
           Id="Package\Load Title Results\Load from file.Paths[Flat File Source Output]"
           TopLeft="234.958331759398,115.07017720296">
@@ -8464,13 +8425,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="129.333333333334,42.6666666666667"
-          Id="Package\Load Vendor Results\Load from file\Read CSV"
-          TopLeft="105.624998426065,93.0526333304324" />
-        <NodeLayout
           Size="176,42.6666666666667"
           Id="Package\Load Vendor Results\Load from file\vendor_load_results"
           TopLeft="422,91.5" />
+        <NodeLayout
+          Size="129.333333333334,42.6666666666667"
+          Id="Package\Load Vendor Results\Load from file\Read CSV"
+          TopLeft="105.624998426065,93.0526333304324" />
         <EdgeLayout
           Id="Package\Load Vendor Results\Load from file.Paths[Flat File Source Output]"
           TopLeft="234.958331759398,113.60964999855">
@@ -8498,57 +8459,6 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Load Vendor Results\Load from file\vendor_load_results">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Load Inventory Results\Load from file">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="129.333333333334,42.6666666666667"
-          Id="Package\Load Inventory Results\Load from file\Read CSV"
-          TopLeft="105.624998426065,93.0526333304324" />
-        <NodeLayout
-          Size="186.666666666667,42.6666666666667"
-          Id="Package\Load Inventory Results\Load from file\inventory_load_results"
-          TopLeft="438.5,90.5" />
-        <EdgeLayout
-          Id="Package\Load Inventory Results\Load from file.Paths[Flat File Source Output]"
-          TopLeft="234.958331759398,113.10964999855">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="203.541668240602,0"
-              Start="0,0"
-              End="196.041668240602,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="196.041668240602,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load Inventory Results\Load from file\inventory_load_results">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
