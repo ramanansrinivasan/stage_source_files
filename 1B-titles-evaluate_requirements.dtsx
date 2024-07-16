@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{8201040A-5BB1-4CCE-A57A-4C6E96EE599F}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{2EEF21EB-8C04-4A38-9151-2CD7EA035108}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -40,7 +40,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS source.sap_titles;&#xA;GO&#xA;SELECT * INTO source.sap_titles&#xA;  FROM (&#xA;SELECT  s.*&#xA;      , 1 AS DM001_Check&#xA;&#x9;  , 1 AS DM002_Check&#xA;&#x9;  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' THEN 1 ELSE 0 END AS DM003_Check --nonmandatory&#xA;      , CASE WHEN CONVERT(DATE, s.[SE publication date], 103) &lt;= GETDATE() + 730.50 THEN 1 ELSE 0 END AS DM004_Check&#xA;&#x9;  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' THEN 1 ELSE 0 END AS DM005_Check --nonmandatory&#xA;&#x9;  , 1 AS DM006_Check&#xA;&#x9;  , 1 AS DM007_Check&#xA;&#x9;  , 1 AS DM008_Check&#xA;&#x9;  , 1 AS DM009_Check&#xA;&#x9;  , 1 AS DM010_Check&#xA;&#x9;  , 1 AS DM011_Check&#xA;  FROM source.sap_title_data s&#xA;  ) rst;&#xA;GO&#xA;&#xA;&#xA;DROP TABLE IF EXISTS source.sap_titles_not_meeting_requirements;&#xA;GO&#xA;SELECT * INTO source.sap_titles_not_meeting_requirements&#xA;  FROM (&#xA;SELECT ilv.*&#xA;  FROM (&#xA;SELECT src.*&#xA;     , src.[DM001_Check] &amp; src.[DM002_Check] &amp; src.[DM004_Check] &amp; src.[DM006_Check] &amp; &#xA;&#x9;   src.[DM007_Check] &amp; src.[DM008_Check] &amp; src.[DM009_Check] &amp; src.[DM010_Check] &amp; src.[DM011_Check] AS not_meeting_requirements&#xA;  FROM [source].[sap_titles] src&#xA;  ) ilv&#xA; WHERE ilv.not_meeting_requirements = 0&#xA; ) ilv; " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS source.sap_titles;&#xA;GO&#xA;SELECT * INTO source.sap_titles&#xA;  FROM (&#xA;SELECT  s.*&#xA;      , 1 AS DM001_Check&#xA;&#x9;  , 1 AS DM002_Check&#xA;&#x9;  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' THEN 1 ELSE 0 END AS DM003_Check --nonmandatory&#xA;      , CASE WHEN CONVERT(DATE, s.[SE publication date], 103) &gt;= GETDATE() AND CONVERT(DATE, s.[SE publication date], 103) &lt;= GETDATE() + 730.50 THEN 1 ELSE 0 END AS DM004_Check&#xA;&#x9;  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' THEN 1 ELSE 0 END AS DM005_Check --nonmandatory&#xA;&#x9;  , 1 AS DM006_Check&#xA;&#x9;  , 1 AS DM007_Check&#xA;&#x9;  , 1 AS DM008_Check&#xA;&#x9;  , 1 AS DM009_Check&#xA;&#x9;  , 1 AS DM010_Check&#xA;&#x9;  , 1 AS DM011_Check&#xA;  FROM source.sap_title_data s&#xA;  ) rst;&#xA;GO&#xA;&#xA;&#xA;DROP TABLE IF EXISTS source.sap_titles_not_meeting_requirements;&#xA;GO&#xA;SELECT * INTO source.sap_titles_not_meeting_requirements&#xA;  FROM (&#xA;SELECT ilv.*&#xA;  FROM (&#xA;SELECT src.*&#xA;     , src.[DM001_Check] &amp; src.[DM002_Check] &amp; src.[DM004_Check] &amp; src.[DM006_Check] &amp; &#xA;&#x9;   src.[DM007_Check] &amp; src.[DM008_Check] &amp; src.[DM009_Check] &amp; src.[DM010_Check] &amp; src.[DM011_Check] AS not_meeting_requirements&#xA;  FROM [source].[sap_titles] src&#xA;  ) ilv&#xA; WHERE ilv.not_meeting_requirements = 0&#xA; ) ilv; " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
