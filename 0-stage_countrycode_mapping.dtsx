@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{2890AD7F-9AA7-4592-9170-F6693D663098}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{33853BBB-8108-4BAB-B458-B6C44A231F7D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -488,13 +488,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="169.333333333334,42.6666666666667"
-          Id="Package\Country code mapping\Truncate countrycode_map"
-          TopLeft="8.93333333333334,14.4666666666667" />
-        <NodeLayout
-          Size="145.333333333334,42.6666666666667"
+          Size="145,43"
           Id="Package\Country code mapping\Stage mapping data"
           TopLeft="208.433333333333,13.4666666666667" />
+        <NodeLayout
+          Size="169,43"
+          Id="Package\Country code mapping\Truncate countrycode_map"
+          TopLeft="8.93333333333334,14.4666666666667" />
         <EdgeLayout
           Id="Package\Country code mapping.PrecedenceConstraints[Constraint]"
           TopLeft="178.266666666667,35.3">
@@ -520,8 +520,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="358.666666666667,112"
-          Size="358.666666666667,155.333333333334"
+          PanelSize="359,112"
+          Size="359,155"
           Id="Package\Country code mapping"
           TopLeft="197,53" />
       </GraphLayout>
@@ -533,11 +533,11 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="112,42.6666666666667"
+          Size="112,43"
           Id="Package\Country code mapping\Stage mapping data\Input data"
           TopLeft="109.333333333333,172.666666666667" />
         <NodeLayout
-          Size="137.333333333334,42.6666666666667"
+          Size="137,43"
           Id="Package\Country code mapping\Stage mapping data\countrycode_map"
           TopLeft="475.333333333333,177.333333333333" />
         <EdgeLayout

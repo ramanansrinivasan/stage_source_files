@@ -9,6 +9,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=DM_Dev_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}UKWWHDSQLWI099.DM_Dev_NP3;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=DM_MoC_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}UKWWHDSQLWI099.DM_Dev_NP3;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

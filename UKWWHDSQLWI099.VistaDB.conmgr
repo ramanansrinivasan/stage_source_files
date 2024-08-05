@@ -7,6 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=VistaDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-stage_source_files-{6516E543-A1C3-4FC0-BDDA-CCA172B687F8}UKWWHDSQLWI099.VistaDB;Auto Translate=False;" />
+      DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=VistaDB2;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-stage_source_files-{6516E543-A1C3-4FC0-BDDA-CCA172B687F8}UKWWHDSQLWI099.VistaDB;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
