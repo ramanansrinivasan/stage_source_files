@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{A5F2E883-270A-42CF-82F3-36B453047656}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{777AAFD1-F0EC-4716-BD28-C7747220384F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1599,22 +1599,22 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="168,43"
+          Size="168,42.6666666666667"
           Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact"
           TopLeft="18.4999941512946,7.29473945645415" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="205,106"
-          Size="205,149"
+          PanelSize="205.333333333334,106"
+          Size="205.333333333334,149.333333333334"
           Id="Package\Stage Title Data\Foreach Loop Container"
           TopLeft="123.333333333333,113.866666666667" />
         <NodeLayout
-          Size="191,43"
+          Size="190.666666666667,42.6666666666667"
           Id="Package\Stage Title Data\Truncate sap_title_data"
           TopLeft="8.58333182459079,13.5087745055378" />
         <NodeLayout
-          Size="165,43"
+          Size="165.333333333334,42.6666666666667"
           Id="Package\Stage Title Data\update run_status"
           TopLeft="315.458327251797,302.92983258475" />
         <EdgeLayout
@@ -1688,8 +1688,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="577,403"
-          Size="577,446"
+          PanelSize="577.333333333334,402.666666666667"
+          Size="577.333333333334,446"
           Id="Package\Stage Title Data"
           TopLeft="92.4999986216426,80.7368436249339" />
       </GraphLayout>

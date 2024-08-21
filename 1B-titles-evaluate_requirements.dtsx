@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{8B39AFF0-65FF-4EFD-B569-9C875F733E22}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{2A30554E-766A-417B-B013-983E511E017B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -59,14 +59,14 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="111,43"
+          Size="110.666666666667,42.6666666666667"
           Id="Package\Evaluate Requirement Criteria\sap_titles"
           TopLeft="37.8666666666667,17.3333333333333" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="205,115"
-          Size="205,157"
+          PanelSize="205.333333333334,114.666666666667"
+          Size="205.333333333334,157.333333333334"
           Id="Package\Evaluate Requirement Criteria"
           TopLeft="241,68" />
       </GraphLayout>
