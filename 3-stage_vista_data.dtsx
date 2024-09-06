@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="UKWWHDSQLWI099"
   DTS:CreatorName="UK\PAM-WMS-Migration"
-  DTS:DTSID="{8B98095D-7DF6-4EBD-8AD8-6FA25E55AB2D}"
+  DTS:DTSID="{A0DC30B3-1283-4165-A9EF-3E62CC785FED}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="2057"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="3-stage_vista_data"
   DTS:PackageType="5"
-  DTS:VersionBuild="72"
-  DTS:VersionGUID="{BD568642-3438-476C-8815-BE43E0A73DEB}">
+  DTS:VersionBuild="76"
+  DTS:VersionGUID="{1733339A-6BC5-4334-AA83-0003415F7962}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -14075,7 +14075,6 @@
       DTS:refId="Package\Create vista_inventory table"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:Disabled="True"
       DTS:DTSID="{E8DC915F-51AB-40C5-A193-FFEFBF24E108}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
@@ -15445,19 +15444,19 @@
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awsbndord"
           TopLeft="64.3749854806813,246.736849008175" />
         <NodeLayout
-          Size="134,42.6666666666667"
+          Size="134,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet"
           TopLeft="89.5416688739012,97.4210541641282" />
         <NodeLayout
-          Size="181.333333333334,42.6666666666667"
+          Size="181,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Truncate AwsBndOrd"
           TopLeft="59.624985611066,173.403513227914" />
         <NodeLayout
-          Size="173.333333333334,42.6666666666667"
+          Size="173,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Truncate Awslocdet"
           TopLeft="72.7499992363153,24.5263159311379" />
         <EdgeLayout
@@ -15529,16 +15528,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="285.333333333334,350.666666666667"
-          Size="285.333333333334,393.333333333334"
+          PanelSize="285,351"
+          Size="285,393"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet"
-          TopLeft="1012,98.6666666666667" />
+          TopLeft="1010.66666666667,98.6666666666667" />
         <NodeLayout
-          Size="134,42.6666666666667"
+          Size="134,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr"
           TopLeft="78.2083355405679,99.4210541641282" />
         <NodeLayout
-          Size="144,42.6666666666667"
+          Size="144,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr\Truncate Awslochdr"
           TopLeft="72.7499992363153,24.5263159311379" />
         <EdgeLayout
@@ -15566,16 +15565,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="285.333333333334,272"
-          Size="285.333333333334,314.666666666667"
+          PanelSize="285,272"
+          Size="285,315"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr"
           TopLeft="658.833322343727,92.6140345596982" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awstitloc\Stage Awstitloc"
           TopLeft="221,16" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="167,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awstitloc\Truncate Awstitloc"
           TopLeft="21.4999999999999,17" />
         <EdgeLayout
@@ -15603,16 +15602,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="449.333333333334,92"
-          Size="449.333333333334,134.666666666667"
+          PanelSize="449,92"
+          Size="449,135"
           Id="Package\Copy Vista Inventory Data to Staging - Awstitloc"
           TopLeft="152.3333316197,181" />
         <NodeLayout
-          Size="137.333333333334,42.6666666666667"
+          Size="137,43"
           Id="Package\Copy Vista Title Data to Staging\Stage Vista Titles"
           TopLeft="212,18.1666666666667" />
         <NodeLayout
-          Size="145.333333333334,42.6666666666667"
+          Size="145,43"
           Id="Package\Copy Vista Title Data to Staging\Truncate vista_titles"
           TopLeft="12.5,19.1666666666667" />
         <EdgeLayout
@@ -15640,8 +15639,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="382.666666666667,68"
-          Size="382.666666666667,110.666666666667"
+          PanelSize="383,68"
+          Size="383,111"
           Id="Package\Copy Vista Title Data to Staging"
           TopLeft="178.291665875043,30.5000000000001" />
         <NodeLayout
@@ -15680,15 +15679,15 @@
           HeaderHeight="43"
           IsExpanded="False"
           PanelSize="383,117.333333333334"
-          Size="382.666666666667,42.6666666666667"
+          Size="383,43"
           Id="Package\Copy Vista Vendor data to Staging"
           TopLeft="579.791665875043,2.66666666666663" />
         <NodeLayout
-          Size="212,42.6666666666667"
+          Size="212,43"
           Id="Package\Create vista_inventory table\Create vista_inventory table"
           TopLeft="16.2222222222221,15.7777777777777" />
         <NodeLayout
-          Size="138,42.6666666666667"
+          Size="138,43"
           Id="Package\Create vista_inventory table\update run_status"
           TopLeft="32.8888888888888,86.4444444444444" />
         <EdgeLayout
@@ -15728,16 +15727,16 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="233.333333333334,184"
-          Size="233.333333333334,226.666666666667"
+          PanelSize="233,184"
+          Size="233,227"
           Id="Package\Create vista_inventory table"
           TopLeft="751.097223088352,565.63742802102" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,43"
           Id="Package\Temp container\Stage Awsbndord"
           TopLeft="15.6666622708245,79.0350963093022" />
         <NodeLayout
-          Size="181.333333333334,42.6666666666667"
+          Size="181,43"
           Id="Package\Temp container\Truncate AwsBndOrd"
           TopLeft="10.9166624012092,5.70176052904083" />
         <EdgeLayout
@@ -15765,8 +15764,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="205.333333333334,177.333333333334"
-          Size="205.333333333334,218.666666666667"
+          PanelSize="205,177"
+          Size="205,219"
           Id="Package\Temp container"
           TopLeft="148.416664524625,387.385970823542" />
         <EdgeLayout
@@ -15819,26 +15818,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.8333443229398,-19.0584790041426"
+              EndConnector="66.5000109896065,45.3859654403018"
               Start="0,0"
-              End="60.3333443229398,-19.0584790041426">
+              End="59.0000109896065,45.3859654403018">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="36.534839167614,0" />
+                    End="29.2500054948032,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="36.534839167614,0"
-                    Point2="40.534839167614,0"
-                    Point3="40.534839167614,-4" />
+                    Point1="29.2500054948032,0"
+                    Point2="33.2500054948032,0"
+                    Point3="33.2500054948032,4" />
                   <mssgle:LineSegment
-                    End="40.534839167614,-15.0584790041426" />
+                    End="33.2500054948032,41.3859654403018" />
                   <mssgle:CubicBezierSegment
-                    Point1="40.534839167614,-15.0584790041426"
-                    Point2="40.534839167614,-19.0584790041426"
-                    Point3="44.534839167614,-19.0584790041426" />
+                    Point1="33.2500054948032,41.3859654403018"
+                    Point2="33.2500054948032,45.3859654403018"
+                    Point3="37.2500054948032,45.3859654403018" />
                   <mssgle:LineSegment
-                    End="60.3333443229398,-19.0584790041426" />
+                    End="59.0000109896065,45.3859654403018" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15849,30 +15848,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="1154.5,491.666666666667">
+          TopLeft="1153.33333333333,492">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-286.902776911648,73.9707613543533"
+              EndConnector="-285.569443578315,73.63742802102"
               Start="0,0"
-              End="-286.902776911648,66.4707613543533">
+              End="-285.569443578315,66.13742802102">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.9853806771767" />
+                    End="0,32.81871401051" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.9853806771767"
-                    Point2="0,36.9853806771767"
-                    Point3="-4,36.9853806771767" />
+                    Point1="0,32.81871401051"
+                    Point2="0,36.81871401051"
+                    Point3="-4,36.81871401051" />
                   <mssgle:LineSegment
-                    End="-282.902776911648,36.9853806771767" />
+                    End="-281.569443578315,36.81871401051" />
                   <mssgle:CubicBezierSegment
-                    Point1="-282.902776911648,36.9853806771767"
-                    Point2="-286.902776911648,36.9853806771767"
-                    Point3="-286.902776911648,40.9853806771767" />
+                    Point1="-281.569443578315,36.81871401051"
+                    Point2="-285.569443578315,36.81871401051"
+                    Point3="-285.569443578315,40.81871401051" />
                   <mssgle:LineSegment
-                    End="-286.902776911648,66.4707613543533" />
+                    End="-285.569443578315,66.13742802102" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15888,17 +15887,17 @@
     design-time-name="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awsbndord">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="116,42.6666666666667"
+          Size="116,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awsbndord\Awsbndord"
           TopLeft="704,179" />
         <NodeLayout
-          Size="182.666666666667,42.6666666666667"
+          Size="183,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awsbndord\attach run_id on source records"
           TopLeft="417.533333333333,179.766666666667" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awsbndord\Read Awsbndord data"
           TopLeft="189.5,177.5" />
         <EdgeLayout
@@ -15920,9 +15919,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15944,9 +15941,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15982,17 +15977,17 @@
     design-time-name="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
+          Size="113,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\Awslocdet"
           TopLeft="721.666666666667,181.5" />
         <NodeLayout
-          Size="149.333333333334,42.6666666666667"
+          Size="149,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\Read Awslocdet data"
           TopLeft="189.5,177.5" />
         <NodeLayout
-          Size="182.666666666667,42.6666666666667"
+          Size="183,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslocdet\Stage Awslocdet\attach run_id on source records"
           TopLeft="417.533333333333,179.766666666667" />
         <EdgeLayout
@@ -16014,9 +16009,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16038,9 +16031,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16050,17 +16041,17 @@
     design-time-name="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.333333333334,42.6666666666667"
+          Size="149,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr\Read Awslochdr data"
           TopLeft="189.5,177.5" />
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
+          Size="113,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr\Awslochdr"
           TopLeft="705.666666666667,181" />
         <NodeLayout
-          Size="182.666666666667,42.6666666666667"
+          Size="183,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awslochdr\Stage Awslochdr\attach run_id on source records"
           TopLeft="417.533333333333,179.766666666667" />
         <EdgeLayout
@@ -16082,9 +16073,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16106,9 +16095,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16144,17 +16131,17 @@
     design-time-name="Package\Copy Vista Inventory Data to Staging - Awstitloc\Stage Awstitloc">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="128,42.6666666666667"
+          Size="128,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awstitloc\Stage Awstitloc\Read Awstitloc"
           TopLeft="71.9384615384615,165.892307692308" />
         <NodeLayout
-          Size="109.333333333334,42.6666666666667"
+          Size="109,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awstitloc\Stage Awstitloc\Awstitloc"
           TopLeft="658,164" />
         <NodeLayout
-          Size="182.666666666667,42.6666666666667"
+          Size="183,43"
           Id="Package\Copy Vista Inventory Data to Staging - Awstitloc\Stage Awstitloc\attach run_id on source records"
           TopLeft="322.276923076923,168.830769230769" />
         <EdgeLayout
@@ -16176,9 +16163,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16200,9 +16185,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16238,17 +16221,17 @@
     design-time-name="Package\Copy Vista Title Data to Staging\Stage Vista Titles">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="114.666666666667,42.6666666666667"
+          Size="115,43"
           Id="Package\Copy Vista Title Data to Staging\Stage Vista Titles\vista_titles"
           TopLeft="500.8,75.7" />
         <NodeLayout
-          Size="160,42.6666666666667"
+          Size="160,43"
           Id="Package\Copy Vista Title Data to Staging\Stage Vista Titles\Read Vista Source Titles"
           TopLeft="104.8,77.8" />
         <NodeLayout
-          Size="182.666666666667,42.6666666666667"
+          Size="183,43"
           Id="Package\Copy Vista Title Data to Staging\Stage Vista Titles\attach run_id on source records"
           TopLeft="328,148" />
         <EdgeLayout
@@ -16282,9 +16265,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16318,9 +16299,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

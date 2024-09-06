@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="UKWWHDSQLWI099"
   DTS:CreatorName="UK\PAM-WMS-Migration"
-  DTS:DTSID="{C215114A-4684-45B5-AECA-F249C83F0882}"
+  DTS:DTSID="{D0E66841-8AA9-4AD7-81C2-5AE5E18D540A}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="2057"
-  DTS:ObjectName="0-customers-stage_sap_customers"
+  DTS:ObjectName="xxx-customers-stage_and_generate_sap_customers"
   DTS:PackageType="5"
-  DTS:VersionBuild="71"
-  DTS:VersionGUID="{F0C06A7A-9C74-4828-B7D1-C56DCF070D00}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{0DFEA2CB-9954-4014-8DDF-F88DFD3FC52C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1626,18 +1626,18 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="192,43"
+          Size="192,42.6666666666667"
           Id="Package\Stage Customers Data\Foreach Loop Container\Stage Customer Extract"
           TopLeft="17.2499941699211,7.29473945645412" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="217,107"
-          Size="217,149"
+          PanelSize="217.333333333334,106.666666666667"
+          Size="217.333333333334,149.333333333334"
           Id="Package\Stage Customers Data\Foreach Loop Container"
           TopLeft="123.333333333333,113.866666666667" />
         <NodeLayout
-          Size="197,43"
+          Size="197.333333333334,42.6666666666667"
           Id="Package\Stage Customers Data\Truncate sap_customers"
           TopLeft="8.58333182459079,13.5087745055378" />
         <EdgeLayout
@@ -1677,8 +1677,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="577,403"
-          Size="577,446"
+          PanelSize="577.333333333334,402.666666666667"
+          Size="577.333333333334,446"
           Id="Package\Stage Customers Data"
           TopLeft="92.4999986216426,80.736843624934" />
       </GraphLayout>

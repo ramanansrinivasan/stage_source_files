@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="UKWWHDSQLWI099"
   DTS:CreatorName="UK\PAM-WMS-Migration"
-  DTS:DTSID="{343836F3-DE41-4835-A474-177A625ED744}"
+  DTS:DTSID="{18164981-8900-47B0-90B0-59A862CA0A18}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="2057"
-  DTS:ObjectName="stage_vendor_data"
+  DTS:ObjectName="2-stage_sap_vendor_data"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{FD495E10-146E-47E3-914E-BDD82FCFD164}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{B25B1F51-7D46-48D5-A580-348E1D5789B9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2133,15 +2133,15 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="181,43"
+          Size="181.333333333334,42.6666666666667"
           Id="Package\Stage Vendor Data\Stage Vendor Extract"
           TopLeft="269.208327940976,69.6491245069881" />
         <NodeLayout
-          Size="207,43"
+          Size="206.666666666667,42.6666666666667"
           Id="Package\Stage Vendor Data\Truncate sap_vendor_data"
           TopLeft="16.7083317035189,74.2806995135154" />
         <NodeLayout
-          Size="165,43"
+          Size="165.333333333334,42.6666666666667"
           Id="Package\Stage Vendor Data\update run_status"
           TopLeft="489.833324653407,71.6666703370581" />
         <EdgeLayout
@@ -2191,8 +2191,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="661,199"
-          Size="661,241"
+          PanelSize="661.333333333334,198.666666666667"
+          Size="661.333333333334,241.333333333334"
           Id="Package\Stage Vendor Data"
           TopLeft="92.4999986216426,80.7368436249339" />
       </GraphLayout>
