@@ -16,7 +16,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=UKWWHDSQLWI099;Initial Catalog=DM_MoC_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}UKWWHDSQLWI099.DM_Dev_NP3;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=UKWWHDSQLWI099;Initial Catalog=DM_DryRun2_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}UKWWHDSQLWI099.DM_DryRun2_NP3;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>
@@ -37,7 +37,7 @@
       <SSIS:Property
         SSIS:Name="Sensitive">0</SSIS:Property>
       <SSIS:Property
-        SSIS:Name="Value">Data Source=UKWWHDSQLWI099;Initial Catalog=VistaDB2;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{6D9A288A-FCA2-4AFD-A7EF-77C7837F14DC}UKWWHDSQLWI099.VistaDB;Auto Translate=False;</SSIS:Property>
+        SSIS:Name="Value">Data Source=UKWWHDSQLWI099;Initial Catalog=VistaDB_DR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{6D9A288A-FCA2-4AFD-A7EF-77C7837F14DC}UKWWHDSQLWI099.VistaDB_DR;Auto Translate=False;</SSIS:Property>
       <SSIS:Property
         SSIS:Name="DataType">18</SSIS:Property>
     </SSIS:Properties>

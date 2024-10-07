@@ -3,10 +3,12 @@
   DTS:ObjectName="UKWWHDSQLWI099.VistaDB"
   DTS:DTSID="{6516E543-A1C3-4FC0-BDDA-CCA172B687F8}"
   DTS:CreationName="OLEDB">
+  <DTS:PropertyExpression
+    DTS:Name="ConnectionString">@[$Project::VistaDB_ConnectionString]</DTS:PropertyExpression>
   <DTS:ObjectData>
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="1"
       DTS:ConnectRetryInterval="5"
-      DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=VistaDB2;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-stage_source_files-{6516E543-A1C3-4FC0-BDDA-CCA172B687F8}UKWWHDSQLWI099.VistaDB;" />
+      DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=VistaDB_DR;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{6D9A288A-FCA2-4AFD-A7EF-77C7837F14DC}UKWWHDSQLWI099.VistaDB_DR;Auto Translate=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

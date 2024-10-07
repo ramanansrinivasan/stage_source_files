@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{777AAFD1-F0EC-4716-BD28-C7747220384F}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{EB50188C-0E6B-4065-8F76-ED44EEDD704E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -254,7 +254,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="varRunID">
       <DTS:VariableValue
-        DTS:DataType="3">0</DTS:VariableValue>
+        DTS:DataType="3">1</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -1532,7 +1532,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE source.sap_title_data;&#xA;GO&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'New'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'titles' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_title_data;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'New'&#xA;GO&#xA;&#xA;/*TRUNCATE TABLE source.sap_title_data;&#xA;GO&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'New'*/" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
                 SQLTask:DtsVariableName="User::varRunID"
@@ -1601,12 +1601,12 @@
         <NodeLayout
           Size="168,42.6666666666667"
           Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact"
-          TopLeft="18.4999941512946,7.29473945645415" />
+          TopLeft="18.4999941512946,6.61052891725979" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="205.333333333334,106"
-          Size="205.333333333334,149.333333333334"
+          PanelSize="216.666666666667,106.666666666667"
+          Size="216.666666666667,150"
           Id="Package\Stage Title Data\Foreach Loop Container"
           TopLeft="123.333333333333,113.866666666667" />
         <NodeLayout
@@ -1623,26 +1623,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="122.083334842076,57.6912254944622"
+              EndConnector="127.750001508742,57.6912254944626"
               Start="0,0"
-              End="122.083334842076,50.1912254944622">
+              End="127.750001508742,50.1912254944626">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.8456127472311" />
+                    End="0,24.8456127472313" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,24.8456127472311"
-                    Point2="0,28.8456127472311"
-                    Point3="4,28.8456127472311" />
+                    Point1="0,24.8456127472313"
+                    Point2="0,28.8456127472313"
+                    Point3="4,28.8456127472313" />
                   <mssgle:LineSegment
-                    End="118.083334842076,28.8456127472311" />
+                    End="123.750001508742,28.8456127472313" />
                   <mssgle:CubicBezierSegment
-                    Point1="118.083334842076,28.8456127472311"
-                    Point2="122.083334842076,28.8456127472311"
-                    Point3="122.083334842076,32.8456127472311" />
+                    Point1="123.750001508742,28.8456127472313"
+                    Point2="127.750001508742,28.8456127472313"
+                    Point3="127.750001508742,32.8456127472313" />
                   <mssgle:LineSegment
-                    End="122.083334842076,50.1912254944622" />
+                    End="127.750001508742,50.1912254944626" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1653,30 +1653,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage Title Data.PrecedenceConstraints[Constraint 1]"
-          TopLeft="226,261.866666666667">
+          TopLeft="231.666666666666,263.866666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="172.124993918464,41.0631659180832"
+              EndConnector="166.458327251797,39.063165918083"
               Start="0,0"
-              End="172.124993918464,33.5631659180832">
+              End="166.458327251797,31.563165918083">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5315829590416" />
+                    End="0,15.5315829590415" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.5315829590416"
-                    Point2="0,20.5315829590416"
-                    Point3="4,20.5315829590416" />
+                    Point1="0,15.5315829590415"
+                    Point2="0,19.5315829590415"
+                    Point3="4,19.5315829590415" />
                   <mssgle:LineSegment
-                    End="168.124993918464,20.5315829590416" />
+                    End="162.458327251797,19.5315829590415" />
                   <mssgle:CubicBezierSegment
-                    Point1="168.124993918464,20.5315829590416"
-                    Point2="172.124993918464,20.5315829590416"
-                    Point3="172.124993918464,24.5315829590416" />
+                    Point1="162.458327251797,19.5315829590415"
+                    Point2="166.458327251797,19.5315829590415"
+                    Point3="166.458327251797,23.5315829590415" />
                   <mssgle:LineSegment
-                    End="172.124993918464,33.5631659180832" />
+                    End="166.458327251797,31.563165918083" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1688,8 +1688,8 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="577.333333333334,402.666666666667"
-          Size="577.333333333334,446"
+          PanelSize="577.333333333334,404"
+          Size="577.333333333334,446.666666666667"
           Id="Package\Stage Title Data"
           TopLeft="92.4999986216426,80.7368436249339" />
       </GraphLayout>

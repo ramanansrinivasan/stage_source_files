@@ -5,25 +5,25 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="UKWWHDSQLWI099"
   DTS:CreatorName="UK\PAM-WMS-Migration"
-  DTS:DTSID="{C9A64CBB-8141-41EA-A3B2-807DDCBCBB3D}"
+  DTS:DTSID="{2B8AEBE6-8930-43B9-9DC5-B75CE634B8A6}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5270.0"
   DTS:LocaleID="2057"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="4B-ibd-titles-evaluate_requirements"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{B1935043-4A16-40DB-9CE9-B62465660500}">
+  DTS:VersionBuild="36"
+  DTS:VersionGUID="{872B0CB7-2CAB-48D0-A0DC-C02729F4F0E4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{D4CAC3D6-0EC9-4252-80B1-D7D973D92BC4}"
+      DTS:DTSID="{9878286E-F40F-407F-90EE-748FB5C4C6B8}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="varRunID">
       <DTS:VariableValue
-        DTS:DataType="3">1</DTS:VariableValue>
+        DTS:DataType="3">4</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -31,7 +31,7 @@
       DTS:refId="Package\Evaluate Criteria"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:DTSID="{166F8B74-7904-438E-A1ED-C3EED888568E}"
+      DTS:DTSID="{9EB4E368-5A8D-4859-9C15-5DDC7E568A22}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
       DTS:ObjectName="Evaluate Criteria">
@@ -41,7 +41,7 @@
           DTS:refId="Package\Evaluate Criteria\Evaluate Criteria"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{F6D96A47-4DE3-48E1-9F1E-673BBA5A57F8}"
+          DTS:DTSID="{9337020A-FF54-4C95-ADC1-3D780B6755A6}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="Evaluate Criteria"
@@ -52,11 +52,11 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles"
+                  refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles"
                   componentClassID="Microsoft.OLEDBDestination"
                   contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
                   description="OLE DB Destination"
-                  name="Populate SAP Titles"
+                  name="Populate SAP Inbound Titles"
                   usesDispositions="true"
                   version="4">
                   <properties>
@@ -67,7 +67,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[source].[sap_titles]</property>
+                      name="OpenRowset">[source].[sap_inbound_titles]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -109,7 +109,7 @@
                   </properties>
                   <connections>
                     <connection
-                      refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Connections[OleDbConnection]"
+                      refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Connections[OleDbConnection]"
                       connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
                       connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
                       description="The OLE DB runtime connection used to access the database."
@@ -117,451 +117,451 @@
                   </connections>
                   <inputs>
                     <input
-                      refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input]"
+                      refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
                       errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[run_id]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[run_id]"
                           cachedDataType="i4"
                           cachedName="run_id"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[run_id]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[ISBN]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[ISBN]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="ISBN"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[ISBN]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Created On]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Created On]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Created On"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Created On]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Plant]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Plant]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Plant"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Plant]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Storage Location]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Storage Location]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Storage Location"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Storage Location]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Supply Edition]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Supply Edition]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Supply Edition"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Supply Edition]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Answer Code for Reqs]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Answer Code for Reqs]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Answer Code for Reqs"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Answer Code for Reqs]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Answer Code Text]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Answer Code Text]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Answer Code Text"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Answer Code Text]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[ISBN Name]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[ISBN Name]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="500"
                           cachedName="ISBN Name"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[ISBN Name]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Original Pub Date of Product]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Original Pub Date of Product]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Original Pub Date of Product"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Original Pub Date of Product]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Comm  imp  code no ]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Comm  imp  code no ]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Comm  imp  code no "
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Comm  imp  code no ]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Commodity code 2]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Commodity code 2]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Commodity code 2"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Commodity code 2]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[SE publication date]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[SE publication date]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="SE publication date"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[SE publication date]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[SE publication price]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[SE publication price]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="SE publication price"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[SE publication price]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Author Artist]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Author Artist]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="500"
                           cachedName="Author Artist"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Author Artist]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Finance publisher]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Finance publisher]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Finance publisher"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Finance publisher]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Finance publisher description]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Finance publisher description]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Finance publisher description"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Finance publisher description]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Finance Imprint]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Finance Imprint]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Finance Imprint"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Finance Imprint]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Finance imprint description]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Finance imprint description]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Finance imprint description"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Finance imprint description]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Export Pub Date of Product]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Export Pub Date of Product]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Export Pub Date of Product"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Export Pub Date of Product]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Binding]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Binding]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Binding"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Binding]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Binding Description]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Binding Description]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Binding Description"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Binding Description]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[Country of origin]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[Country of origin]"
                           cachedCodepage="1252"
                           cachedDataType="str"
                           cachedLength="50"
                           cachedName="Country of origin"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[Country of origin]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM001_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM001_Check]"
                           cachedDataType="i4"
                           cachedName="DM001_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM001_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM001_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM001_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM002_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM002_Check]"
                           cachedDataType="i4"
                           cachedName="DM002_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM002_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM002_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM002_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM003_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM003_Check]"
                           cachedDataType="i4"
                           cachedName="DM003_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM003_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM003_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM003_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM004_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM004_Check]"
                           cachedDataType="i4"
                           cachedName="DM004_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM004_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM004_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM004_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM005_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM005_Check]"
                           cachedDataType="i4"
                           cachedName="DM005_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM005_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM005_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM005_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM006_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM006_Check]"
                           cachedDataType="i4"
                           cachedName="DM006_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM006_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM006_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM006_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM007_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM007_Check]"
                           cachedDataType="i4"
                           cachedName="DM007_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM007_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM007_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM007_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM008_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM008_Check]"
                           cachedDataType="i4"
                           cachedName="DM008_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM008_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM008_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM008_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM009_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM009_Check]"
                           cachedDataType="i4"
                           cachedName="DM009_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM009_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM009_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM009_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM010_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM010_Check]"
                           cachedDataType="i4"
                           cachedName="DM010_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM010_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM010_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM010_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[DM011_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[DM011_Check]"
                           cachedDataType="i4"
                           cachedName="DM011_Check"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM011_Check]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM011_Check]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[DM011_Check]" />
                         <inputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].Columns[requirements_check_result]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].Columns[requirements_check_result]"
                           cachedDataType="i4"
                           cachedName="requirements_check_result"
-                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[requirements_check_result]"
+                          externalMetadataColumnId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[requirements_check_result]"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].Columns[requirements_check_result]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
                           dataType="i4"
                           name="run_id" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="ISBN" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Created On" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Plant" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Storage Location" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Supply Edition" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Answer Code for Reqs" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Answer Code Text" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
                           codePage="1252"
                           dataType="str"
                           length="500"
                           name="ISBN Name" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Original Pub Date of Product" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Comm  imp  code no " />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Commodity code 2" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="SE publication date" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="SE publication price" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
                           codePage="1252"
                           dataType="str"
                           length="500"
                           name="Author Artist" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Finance publisher" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Finance publisher description" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Finance Imprint" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Finance imprint description" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Export Pub Date of Product" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Binding" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Binding Description" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
                           codePage="1252"
                           dataType="str"
                           length="50"
                           name="Country of origin" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM001_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM001_Check]"
                           dataType="i4"
                           name="DM001_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM002_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM002_Check]"
                           dataType="i4"
                           name="DM002_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM003_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM003_Check]"
                           dataType="i4"
                           name="DM003_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM004_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM004_Check]"
                           dataType="i4"
                           name="DM004_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM005_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM005_Check]"
                           dataType="i4"
                           name="DM005_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM006_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM006_Check]"
                           dataType="i4"
                           name="DM006_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM007_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM007_Check]"
                           dataType="i4"
                           name="DM007_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM008_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM008_Check]"
                           dataType="i4"
                           name="DM008_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM009_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM009_Check]"
                           dataType="i4"
                           name="DM009_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM010_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM010_Check]"
                           dataType="i4"
                           name="DM010_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM011_Check]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[DM011_Check]"
                           dataType="i4"
                           name="DM011_Check" />
                         <externalMetadataColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input].ExternalColumns[requirements_check_result]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input].ExternalColumns[requirements_check_result]"
                           dataType="i4"
                           name="requirements_check_result" />
                       </externalMetadataColumns>
@@ -569,22 +569,22 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Outputs[OLE DB Destination Error Output]"
+                      refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Outputs[OLE DB Destination Error Output]"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="OLE DB Destination Error Output"
-                      synchronousInputId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input]">
+                      synchronousInputId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -637,7 +637,7 @@ SELECT  s.*
 	  , 1 AS DM009_Check
 	  , 1 AS DM010_Check
 	  , 1 AS DM011_Check
-  FROM source.sap_title_data s
+  FROM source.sap_ibd_title_data s
 WHERE run_id = ?
   ) src</property>
                     <property
@@ -660,7 +660,7 @@ WHERE run_id = ?
                     <property
                       dataType="System.String"
                       description="The mappings between the parameters in the SQL command and variables."
-                      name="ParameterMapping">"0:Input",{D4CAC3D6-0EC9-4252-80B1-D7D973D92BC4};</property>
+                      name="ParameterMapping">"0:Input",{9878286E-F40F-407F-90EE-748FB5C4C6B8};</property>
                   </properties>
                   <connections>
                     <connection
@@ -1087,7 +1087,7 @@ WHERE run_id = ?
                           refId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].ExternalColumns[ISBN Name]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="1000"
                           name="ISBN Name" />
                         <externalMetadataColumn
                           refId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output].ExternalColumns[Original Pub Date of Product]"
@@ -1286,7 +1286,7 @@ WHERE run_id = ?
                           refId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Error Output].Columns[ISBN Name]"
                           codePage="1252"
                           dataType="str"
-                          length="500"
+                          length="1000"
                           lineageId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Error Output].Columns[ISBN Name]"
                           name="ISBN Name" />
                         <outputColumn
@@ -1468,7 +1468,7 @@ WHERE run_id = ?
               <paths>
                 <path
                   refId="Package\Evaluate Criteria\Evaluate Criteria.Paths[OLE DB Source Output]"
-                  endId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Inputs[OLE DB Destination Input]"
+                  endId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles.Inputs[OLE DB Destination Input]"
                   name="OLE DB Source Output"
                   startId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Outputs[OLE DB Source Output]" />
               </paths>
@@ -1479,7 +1479,7 @@ WHERE run_id = ?
           DTS:refId="Package\Evaluate Criteria\Truncate"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{0E25D570-CDB1-4650-9831-6CFAC2D4CED6}"
+          DTS:DTSID="{14DE431E-6412-4047-BF18-EAC755117F2A}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
@@ -1488,7 +1488,7 @@ WHERE run_id = ?
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-              SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'titles' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_titles;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'Staged'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'inbound' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_inbound_titles;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'inbound' AND run_status = 'Staged'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
                 SQLTask:DtsVariableName="User::varRunID"
@@ -1503,7 +1503,7 @@ WHERE run_id = ?
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Evaluate Criteria.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{52ED4FD9-C07F-4FFA-B0BA-A3E61057A7A1}"
+          DTS:DTSID="{169116AD-1B49-4808-A84C-8A762FB9C77C}"
           DTS:From="Package\Evaluate Criteria\Truncate"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -1515,7 +1515,7 @@ WHERE run_id = ?
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
       DTS:Disabled="True"
-      DTS:DTSID="{13995131-C9F0-4E93-9818-4F06D0C9D161}"
+      DTS:DTSID="{6E3DB0AE-2F87-4499-A53C-724CF9D81949}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
       DTS:ObjectName="Evaluate Requirement Criteria">
@@ -1525,7 +1525,7 @@ WHERE run_id = ?
           DTS:refId="Package\Evaluate Requirement Criteria\sap_titles"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{11416D27-B3B2-4DAF-93F3-BA35D598AAD8}"
+          DTS:DTSID="{C2D832DC-C944-4CC5-9486-5AF2022D59FA}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="sap_titles"
@@ -1543,7 +1543,7 @@ WHERE run_id = ?
       DTS:refId="Package\Not meeting Criteria"
       DTS:CreationName="STOCK:SEQUENCE"
       DTS:Description="Sequence Container"
-      DTS:DTSID="{14bc7e27-a673-4eff-83c5-6ca87cab7be6}"
+      DTS:DTSID="{31785C87-E1EB-4439-B24A-AA462B1B6411}"
       DTS:ExecutableType="STOCK:SEQUENCE"
       DTS:LocaleID="-1"
       DTS:ObjectName="Not meeting Criteria">
@@ -1553,7 +1553,7 @@ WHERE run_id = ?
           DTS:refId="Package\Not meeting Criteria\not meeting criteria"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{9b98e2ad-93a1-466e-b361-f9c4a514a940}"
+          DTS:DTSID="{E910C77A-2D02-4697-AA06-935431611D05}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="not meeting criteria"
@@ -1593,7 +1593,7 @@ WHERE run_id = ?
 SELECT src.*
      , src.[DM001_Check] &amp; src.[DM002_Check] &amp; src.[DM004_Check] &amp; src.[DM006_Check] &amp; 
 	   src.[DM007_Check] &amp; src.[DM008_Check] &amp; src.[DM009_Check] &amp; src.[DM010_Check] &amp; src.[DM011_Check] AS not_meeting_requirements
-  FROM [source].[sap_titles] src
+  FROM [source].[sap_inbound_titles] src
   ) ilv
  WHERE ilv.not_meeting_requirements = 0
    AND run_id = ?</property>
@@ -1617,7 +1617,7 @@ SELECT src.*
                     <property
                       dataType="System.String"
                       description="The mappings between the parameters in the SQL command and variables."
-                      name="ParameterMapping">"0:Input",{D4CAC3D6-0EC9-4252-80B1-D7D973D92BC4};</property>
+                      name="ParameterMapping">"0:Input",{9878286E-F40F-407F-90EE-748FB5C4C6B8};</property>
                   </properties>
                   <connections>
                     <connection
@@ -2455,7 +2455,7 @@ SELECT src.*
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[source].[sap_titles_not_meeting_requirements]</property>
+                      name="OpenRowset">[source].[sap_inbound_titles_not_meeting_requirements]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -3005,7 +3005,7 @@ SELECT src.*
           DTS:refId="Package\Not meeting Criteria\Truncate"
           DTS:CreationName="Microsoft.ExecuteSQLTask"
           DTS:Description="Execute SQL Task"
-          DTS:DTSID="{f2704457-9e4a-40a0-a704-6e135941ac8a}"
+          DTS:DTSID="{589CB2DD-7E8C-4634-8019-793842A828BC}"
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
@@ -3014,7 +3014,7 @@ SELECT src.*
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-              SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'titles' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_titles_not_meeting_requirements;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'Staged'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'inbound' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_inbound_titles_not_meeting_requirements;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'inbound' AND run_status = 'Staged'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
                 SQLTask:DtsVariableName="User::varRunID"
@@ -3029,7 +3029,7 @@ SELECT src.*
         <DTS:PrecedenceConstraint
           DTS:refId="Package\Not meeting Criteria.PrecedenceConstraints[Constraint]"
           DTS:CreationName=""
-          DTS:DTSID="{d821b44f-cb5c-4650-86f4-daa38cc53439}"
+          DTS:DTSID="{4F47DA08-5057-4746-A092-3F9EA950D9B9}"
           DTS:From="Package\Not meeting Criteria\Truncate"
           DTS:LogicalAnd="True"
           DTS:ObjectName="Constraint"
@@ -3041,7 +3041,7 @@ SELECT src.*
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{93DDAE49-302D-4956-A741-27E9C191FE71}"
+      DTS:DTSID="{8A1D1F34-996F-4226-8356-37DE81972284}"
       DTS:From="Package\Evaluate Criteria"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -3110,25 +3110,25 @@ SELECT src.*
         <NodeLayout
           Size="170.666666666667,42.6666666666667"
           Id="Package\Not meeting Criteria\not meeting criteria"
-          TopLeft="198.249991264194,22.649124751681" />
+          TopLeft="198.874991254881,21.9649142124867" />
         <NodeLayout
           Size="121.333333333334,42.6666666666667"
           Id="Package\Not meeting Criteria\Truncate"
           TopLeft="6.37499412335466,23.3333352908754" />
         <EdgeLayout
           Id="Package\Not meeting Criteria.PrecedenceConstraints[Constraint]"
-          TopLeft="127.708327456688,44.3245633546115">
+          TopLeft="127.708327456688,43.9824580850144">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.541663807506,0"
+              EndConnector="71.1666637981928,0"
               Start="0,0"
-              End="63.041663807506,0">
+              End="63.6666637981928,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="63.041663807506,0" />
+                    End="63.6666637981928,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3141,23 +3141,35 @@ SELECT src.*
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="374,122"
-          Size="374,164.666666666667"
+          Size="374,165.333333333334"
           Id="Package\Not meeting Criteria"
           TopLeft="391.249994169921,282.578952687269" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="570.687494193204,202.315790194884">
+          TopLeft="569.124994216487,202.315790194884">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,80.2631624923849"
+              EndConnector="9.12499995343399,80.2631624923851"
               Start="0,0"
-              End="0,72.7631624923849">
+              End="9.12499995343399,72.7631624923851">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,72.7631624923849" />
+                    End="0,36.1315812461926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.1315812461926"
+                    Point2="0,40.1315812461926"
+                    Point3="4,40.1315812461926" />
+                  <mssgle:LineSegment
+                    End="5.12499995343399,40.1315812461926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.12499995343399,40.1315812461926"
+                    Point2="9.12499995343399,40.1315812461926"
+                    Point3="9.12499995343399,44.1315812461926" />
+                  <mssgle:LineSegment
+                    End="9.12499995343399,72.7631624923851" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3179,23 +3191,23 @@ SELECT src.*
           Id="Package\Evaluate Criteria\Evaluate Criteria\Read data"
           TopLeft="104.999998435378,43.7894745084388" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
-          Id="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles"
-          TopLeft="541.249991934746,48.5789482827993" />
+          Size="216,42.6666666666667"
+          Id="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles"
+          TopLeft="541.874991925433,47.8947377436049" />
         <EdgeLayout
           Id="Package\Evaluate Criteria\Evaluate Criteria.Paths[OLE DB Source Output]"
-          TopLeft="234.333331768712,67.5175447289523">
+          TopLeft="234.333331768711,67.1754394593552">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="306.916660166035,0"
+              EndConnector="307.541660156721,0"
               Start="0,0"
-              End="299.416660166035,0">
+              End="300.041660156721,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="299.416660166035,0" />
+                    End="300.041660156721,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3208,7 +3220,7 @@ SELECT src.*
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles">
+    design-time-name="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Inbound Titles">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3232,7 +3244,7 @@ SELECT src.*
     design-time-name="Package\Not meeting Criteria\not meeting criteria">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="222.666666666667,42.6666666666667"
           Id="Package\Not meeting Criteria\not meeting criteria\SAP Titles not meeting criteria"
@@ -3260,9 +3272,7 @@ SELECT src.*
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
