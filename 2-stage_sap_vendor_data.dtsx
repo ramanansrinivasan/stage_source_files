@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="2-stage_sap_vendor_data"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{81CEAE04-31DC-4E28-81BE-9AFF100392FA}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{F5E945B8-AC71-4CA5-BBBC-B68C64DAB4AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

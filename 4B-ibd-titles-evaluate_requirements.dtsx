@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="4B-ibd-titles-evaluate_requirements"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{872B0CB7-2CAB-48D0-A0DC-C02729F4F0E4}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{E69FCC72-1AAE-42F1-BDEE-E98C95A182A2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -1483,7 +1483,7 @@ WHERE run_id = ?
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1529,7 +1529,7 @@ WHERE run_id = ?
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="sap_titles"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3009,7 +3009,7 @@ SELECT src.*
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3036,6 +3036,29 @@ SELECT src.*
           DTS:To="Package\Not meeting Criteria\not meeting criteria" />
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\update run_status"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{6b5a8f6a-cb10-471a-b176-7815537a8d38}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="update run_status"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+          SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_finish_time = GETDATE() WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="0"
+            SQLTask:DtsVariableName="User::varRunID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="3"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -3046,6 +3069,14 @@ SELECT src.*
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
       DTS:To="Package\Not meeting Criteria" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{3C009A91-00C2-4B2F-B959-BF0E618BEDDD}"
+      DTS:From="Package\Not meeting Criteria"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\update run_status" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -3062,25 +3093,25 @@ SELECT src.*
         <NodeLayout
           Size="158.666666666667,42.6666666666667"
           Id="Package\Evaluate Criteria\Evaluate Criteria"
-          TopLeft="198.249991264194,22.649124751681" />
+          TopLeft="197.624991273507,22.649124751681" />
         <NodeLayout
           Size="121.333333333334,42.6666666666667"
           Id="Package\Evaluate Criteria\Truncate"
           TopLeft="6.37499412335466,23.3333352908754" />
         <EdgeLayout
           Id="Package\Evaluate Criteria.PrecedenceConstraints[Constraint]"
-          TopLeft="127.708327456688,44.3245633546116">
+          TopLeft="127.708327456688,44.3245633546115">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.5416638075063,0"
+              EndConnector="69.9166638168193,0"
               Start="0,0"
-              End="63.0416638075063,0">
+              End="62.4166638168193,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="63.0416638075063,0" />
+                    End="62.4166638168193,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3093,7 +3124,7 @@ SELECT src.*
           HeaderHeight="43"
           IsExpanded="True"
           PanelSize="362,121.333333333334"
-          Size="362,164"
+          Size="362,164.666666666667"
           Id="Package\Evaluate Criteria"
           TopLeft="388.124994216487,38.3157901948839" />
         <NodeLayout
@@ -3140,36 +3171,62 @@ SELECT src.*
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="374,122"
+          PanelSize="374,122.666666666667"
           Size="374,165.333333333334"
           Id="Package\Not meeting Criteria"
           TopLeft="391.249994169921,282.578952687269" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="569.124994216487,202.315790194884">
+          TopLeft="569.124994216487,202.982456861551">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="9.12499995343399,80.2631624923851"
+              EndConnector="9.12499995343399,79.5964958257184"
               Start="0,0"
-              End="9.12499995343399,72.7631624923851">
+              End="9.12499995343399,72.0964958257184">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.1315812461926" />
+                    End="0,35.7982479128592" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,36.1315812461926"
-                    Point2="0,40.1315812461926"
-                    Point3="4,40.1315812461926" />
+                    Point1="0,35.7982479128592"
+                    Point2="0,39.7982479128592"
+                    Point3="4,39.7982479128592" />
                   <mssgle:LineSegment
-                    End="5.12499995343399,40.1315812461926" />
+                    End="5.12499995343399,39.7982479128592" />
                   <mssgle:CubicBezierSegment
-                    Point1="5.12499995343399,40.1315812461926"
-                    Point2="9.12499995343399,40.1315812461926"
-                    Point3="9.12499995343399,44.1315812461926" />
+                    Point1="5.12499995343399,39.7982479128592"
+                    Point2="9.12499995343399,39.7982479128592"
+                    Point3="9.12499995343399,43.7982479128592" />
                   <mssgle:LineSegment
-                    End="9.12499995343399,72.7631624923851" />
+                    End="9.12499995343399,72.0964958257184" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\update run_status"
+          TopLeft="492.87499624677,553.754392146624" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="576.895828541679,447.912286020602">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,105.842106126022"
+              Start="0,0"
+              End="0,98.3421061260218">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,98.3421061260218" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
