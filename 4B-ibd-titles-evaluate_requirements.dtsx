@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="4B-ibd-titles-evaluate_requirements"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{E69FCC72-1AAE-42F1-BDEE-E98C95A182A2}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{CC42C8E6-72BB-49D8-96F4-3B4C948B0A40}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -625,10 +625,10 @@ SELECT  s.*
       , 1 AS DM001_Check
 	  , 1 AS DM002_Check
 	  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' THEN 1 ELSE 0 END AS DM003_Check --nonmandatory
-      , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &lt;= GETDATE() + 730.50 THEN 1 
+      , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &lt;= DATEADD(YY,2,CONVERT(DATE, GETDATE(), 103)) THEN 1 
 	         WHEN s.[Answer Code for Reqs] &lt;&gt; 'NYP' THEN 1
 	         ELSE 0 END AS DM004_Check
-	  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &gt;= GETDATE() THEN 1 
+	  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &gt;= CONVERT(DATE, GETDATE(), 103) THEN 1 
 	         WHEN s.[Answer Code for Reqs] &lt;&gt; 'NYP' THEN 1
 	         ELSE 0 END AS DM005_Check
 	  , 1 AS DM006_Check
@@ -637,7 +637,7 @@ SELECT  s.*
 	  , 1 AS DM009_Check
 	  , 1 AS DM010_Check
 	  , 1 AS DM011_Check
-  FROM source.sap_ibd_title_data s
+  FROM source.sap_inbound_title_data s
 WHERE run_id = ?
   ) src</property>
                     <property
@@ -3049,7 +3049,7 @@ SELECT src.*
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-          SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_finish_time = GETDATE() WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_status='ImportCompleted',run_finish_time = GETDATE() WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
             SQLTask:DtsVariableName="User::varRunID"
@@ -3123,7 +3123,7 @@ SELECT src.*
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="362,121.333333333334"
+          PanelSize="362,122"
           Size="362,164.666666666667"
           Id="Package\Evaluate Criteria"
           TopLeft="388.124994216487,38.3157901948839" />
@@ -3175,6 +3175,10 @@ SELECT src.*
           Size="374,165.333333333334"
           Id="Package\Not meeting Criteria"
           TopLeft="391.249994169921,282.578952687269" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\update run_status"
+          TopLeft="492.87499624677,553.754392146624" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="569.124994216487,202.982456861551">
@@ -3209,10 +3213,6 @@ SELECT src.*
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="165.333333333334,42.6666666666667"
-          Id="Package\update run_status"
-          TopLeft="492.87499624677,553.754392146624" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="576.895828541679,447.912286020602">

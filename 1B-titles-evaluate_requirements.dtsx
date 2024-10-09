@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{B1935043-4A16-40DB-9CE9-B62465660500}">
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{9DCCE3CC-64BF-455C-8619-1F7123B50E72}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -625,10 +625,10 @@ SELECT  s.*
       , 1 AS DM001_Check
 	  , 1 AS DM002_Check
 	  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' THEN 1 ELSE 0 END AS DM003_Check --nonmandatory
-      , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &lt;= GETDATE() + 730.50 THEN 1 
+      , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &lt;= DATEADD(YY,2,CONVERT(DATE, GETDATE(), 103)) THEN 1 
 	         WHEN s.[Answer Code for Reqs] &lt;&gt; 'NYP' THEN 1
 	         ELSE 0 END AS DM004_Check
-	  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &gt;= GETDATE() THEN 1 
+	  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &gt;= CONVERT(DATE, GETDATE(), 103) THEN 1 
 	         WHEN s.[Answer Code for Reqs] &lt;&gt; 'NYP' THEN 1
 	         ELSE 0 END AS DM005_Check
 	  , 1 AS DM006_Check
@@ -1483,7 +1483,7 @@ WHERE run_id = ?
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -1529,7 +1529,7 @@ WHERE run_id = ?
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="sap_titles"
-          DTS:ThreadHint="0">
+          DTS:ThreadHint="1">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3009,7 +3009,7 @@ SELECT src.*
           DTS:ExecutableType="Microsoft.ExecuteSQLTask"
           DTS:LocaleID="-1"
           DTS:ObjectName="Truncate"
-          DTS:ThreadHint="1">
+          DTS:ThreadHint="0">
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
@@ -3232,7 +3232,7 @@ SELECT src.*
     design-time-name="Package\Not meeting Criteria\not meeting criteria">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="222.666666666667,42.6666666666667"
           Id="Package\Not meeting Criteria\not meeting criteria\SAP Titles not meeting criteria"
@@ -3260,9 +3260,7 @@ SELECT src.*
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
