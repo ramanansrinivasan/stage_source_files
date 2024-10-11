@@ -11,8 +11,8 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="0-stage_reference_data"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{0481B1FF-A6AC-46D1-97A0-898286DD6F4D}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{5FCD6CF3-50BC-49AC-AF8C-DB15D2E0D666}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -73,6 +73,20 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DM_Working_DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+      DTS:ObjectName="DM_Working_DB">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Package::DM_Working_DB_ConnectionString]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=DM_DryRun3_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}UKWWHDSQLWI099.DM_DryRun2_NP3;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[reference_locations_csv]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{7401A49E-A9DE-4B35-A7AD-CB78023CC1E0}"
@@ -111,6 +125,17 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{E1BD0652-FAC6-4E1D-B5E4-AC56995A7086}"
+      DTS:ObjectName="DM_Working_DB_ConnectionString">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">Data Source=UKWWHDSQLWI099;Initial Catalog=DM_DryRun3_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}UKWWHDSQLWI099.DM_DryRun2_NP3;Auto Translate=False;</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -206,8 +231,8 @@
                       <connections>
                         <connection
                           refId="Package\Sequence Container\Country code mapping\Stage mapping data\countrycode_map.Connections[OleDbConnection]"
-                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                          connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                           description="The OLE DB runtime connection used to access the database."
                           name="OleDbConnection" />
                       </connections>
@@ -605,8 +630,8 @@
                       <connections>
                         <connection
                           refId="Package\Sequence Container\Load Reference Locations NP3\Reference Locations\Load reference locations.Connections[OleDbConnection]"
-                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                          connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                           description="The OLE DB runtime connection used to access the database."
                           name="OleDbConnection" />
                       </connections>
@@ -940,7 +965,7 @@
     design-time-name="Package\Sequence Container\Country code mapping\Stage mapping data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="112,42.6666666666667"
           Id="Package\Sequence Container\Country code mapping\Stage mapping data\Input data"
@@ -968,7 +993,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -991,15 +1018,15 @@
     design-time-name="Package\Sequence Container\Load Reference Locations NP3\Reference Locations">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="199,42"
-          Id="Package\Sequence Container\Load Reference Locations NP3\Reference Locations\Load reference locations"
-          TopLeft="566,185" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42"
           Id="Package\Sequence Container\Load Reference Locations NP3\Reference Locations\Read reference file"
           TopLeft="197,187" />
+        <NodeLayout
+          Size="199,42"
+          Id="Package\Sequence Container\Load Reference Locations NP3\Reference Locations\Load reference locations"
+          TopLeft="566,185" />
         <EdgeLayout
           Id="Package\Sequence Container\Load Reference Locations NP3\Reference Locations.Paths[Flat File Source Output]"
           TopLeft="369,207">
@@ -1019,7 +1046,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

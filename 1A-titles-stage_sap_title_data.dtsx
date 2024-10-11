@@ -11,11 +11,23 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="64"
-  DTS:VersionGUID="{0F60535A-B086-4B2B-A10E-6954A9B5A67E}">
+  DTS:VersionBuild="72"
+  DTS:VersionGUID="{42276D95-868F-4B1C-BE13-7385F045380A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DM_Working_DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4E611D01-C99F-48EF-8406-EDCF8938AD8F}"
+      DTS:ObjectName="DM_Working_DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=DM_DryRun3_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{4E611D01-C99F-48EF-8406-EDCF8938AD8F}UKWWHDSQLWI099.DM_DryRun3_NP3;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SAP_Titles_Extract_CSV]"
       DTS:CreationName="FLATFILE"
@@ -1122,8 +1134,8 @@
                       <connections>
                         <connection
                           refId="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact\sap_title_data.Connections[OleDbConnection]"
-                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                          connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                           description="The OLE DB runtime connection used to access the database."
                           name="OleDbConnection" />
                       </connections>
@@ -1504,8 +1516,8 @@
           <DTS:ForEachVariableMappings>
             <DTS:ForEachVariableMapping
               DTS:CreationName=""
-              DTS:DTSID="{2AFAF28D-EE39-4597-9DBA-399B9182A7F9}"
-              DTS:ObjectName="{2AFAF28D-EE39-4597-9DBA-399B9182A7F9}"
+              DTS:DTSID="{14BB08E4-5AE8-4340-B559-862224FEFD0C}"
+              DTS:ObjectName="{14BB08E4-5AE8-4340-B559-862224FEFD0C}"
               DTS:ValueIndex="0"
               DTS:VariableName="User::varCurrentFile" />
           </DTS:ForEachVariableMappings>
@@ -1522,7 +1534,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{4E611D01-C99F-48EF-8406-EDCF8938AD8F}"
               SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'titles' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_title_data;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'New'&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -1558,7 +1570,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+          SQLTask:Connection="{4E611D01-C99F-48EF-8406-EDCF8938AD8F}"
           SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_status = 'Staged' WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
@@ -1595,7 +1607,7 @@
         <NodeLayout
           Size="168,42.6666666666667"
           Id="Package\Stage Title Data\Foreach Loop Container\Stage Titles Extact"
-          TopLeft="18.4999941512946,6.61052891725979" />
+          TopLeft="18.4999941512947,5.92631837806545" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -1606,33 +1618,21 @@
         <NodeLayout
           Size="190.666666666667,42.6666666666667"
           Id="Package\Stage Title Data\Truncate sap_title_data"
-          TopLeft="87.8749999720604,5.5" />
+          TopLeft="130.999999329448,26.0263161758306" />
         <EdgeLayout
           Id="Package\Stage Title Data.PrecedenceConstraints[Constraint]"
-          TopLeft="183.208333305394,48.1666666666667">
+          TopLeft="228.999999664724,68.6929828424973">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="48.4583333612726,65.7000000000004"
+              EndConnector="0,45.1736838241698"
               Start="0,0"
-              End="48.4583333612726,58.2000000000004">
+              End="0,37.6736838241698">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,28.8500000000002" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.8500000000002"
-                    Point2="0,32.8500000000002"
-                    Point3="4,32.8500000000002" />
-                  <mssgle:LineSegment
-                    End="44.4583333612726,32.8500000000002" />
-                  <mssgle:CubicBezierSegment
-                    Point1="44.4583333612726,32.8500000000002"
-                    Point2="48.4583333612726,32.8500000000002"
-                    Point3="48.4583333612726,36.8500000000002" />
-                  <mssgle:LineSegment
-                    End="48.4583333612726,58.2000000000004" />
+                    End="0,37.6736838241698" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1658,26 +1658,26 @@
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="80.1166624012088,103.705273512262"
+              EndConnector="80.1166624012089,103.705273512261"
               Start="0,0"
-              End="80.1166624012088,96.2052735122616">
+              End="80.1166624012089,96.2052735122613">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,47.8526367561308" />
+                    End="0,47.8526367561307" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,47.8526367561308"
-                    Point2="0,51.8526367561308"
-                    Point3="4,51.8526367561308" />
+                    Point1="0,47.8526367561307"
+                    Point2="0,51.8526367561307"
+                    Point3="4,51.8526367561307" />
                   <mssgle:LineSegment
-                    End="76.1166624012088,51.8526367561308" />
+                    End="76.1166624012089,51.8526367561307" />
                   <mssgle:CubicBezierSegment
-                    Point1="76.1166624012088,51.8526367561308"
-                    Point2="80.1166624012088,51.8526367561308"
-                    Point3="80.1166624012088,55.8526367561308" />
+                    Point1="76.1166624012089,51.8526367561307"
+                    Point2="80.1166624012089,51.8526367561307"
+                    Point3="80.1166624012089,55.8526367561307" />
                   <mssgle:LineSegment
-                    End="80.1166624012088,96.2052735122616" />
+                    End="80.1166624012089,96.2052735122613" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

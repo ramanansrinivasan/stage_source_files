@@ -11,10 +11,24 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="30"
-  DTS:VersionGUID="{9DCCE3CC-64BF-455C-8619-1F7123B50E72}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{24B7AA1A-E644-47EF-9254-AA250C94F3EC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DM_Working_DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{B0C812FB-EE00-4BDF-B7D5-AA6AEDD93ECA}"
+      DTS:ObjectName="DM_Working_DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=DM_DryRun3_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{B0C812FB-EE00-4BDF-B7D5-AA6AEDD93ECA}UKWWHDSQLWI099.DM_DryRun3_NP3;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -110,8 +124,8 @@
                   <connections>
                     <connection
                       refId="Package\Evaluate Criteria\Evaluate Criteria\Populate SAP Titles.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -665,8 +679,8 @@ WHERE run_id = ?
                   <connections>
                     <connection
                       refId="Package\Evaluate Criteria\Evaluate Criteria\Read data.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1487,7 +1501,7 @@ WHERE run_id = ?
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{B0C812FB-EE00-4BDF-B7D5-AA6AEDD93ECA}"
               SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'titles' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_titles;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'Staged'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -1509,35 +1523,6 @@ WHERE run_id = ?
           DTS:ObjectName="Constraint"
           DTS:To="Package\Evaluate Criteria\Evaluate Criteria" />
       </DTS:PrecedenceConstraints>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Evaluate Requirement Criteria"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:Disabled="True"
-      DTS:DTSID="{13995131-C9F0-4E93-9818-4F06D0C9D161}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Evaluate Requirement Criteria">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Evaluate Requirement Criteria\sap_titles"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{11416D27-B3B2-4DAF-93F3-BA35D598AAD8}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="sap_titles"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-              SQLTask:SqlStatementSource="DROP TABLE IF EXISTS source.sap_titles;&#xA;GO&#xA;SELECT * INTO source.sap_titles&#xA;  FROM (&#xA;SELECT src.*&#xA;     , src.[DM001_Check] &amp; src.[DM002_Check] &amp; src.[DM004_Check] &amp; src.[DM006_Check] &amp; &#xA;&#x9;   src.[DM007_Check] &amp; src.[DM008_Check] &amp; src.[DM009_Check] &amp; src.[DM010_Check] &amp; src.[DM011_Check] AS requirements_check_result&#xA;  FROM (&#xA;SELECT  s.*&#xA;      , 1 AS DM001_Check&#xA;&#x9;  , 1 AS DM002_Check&#xA;&#x9;  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' THEN 1 ELSE 0 END AS DM003_Check --nonmandatory&#xA;      , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &lt;= GETDATE() + 730.50 THEN 1 &#xA;&#x9;         WHEN s.[Answer Code for Reqs] &lt;&gt; 'NYP' THEN 1&#xA;&#x9;         ELSE 0 END AS DM004_Check&#xA;&#x9;  , CASE WHEN s.[Answer Code for Reqs] = 'NYP' AND CONVERT(DATE, s.[SE publication date], 103) &gt;= GETDATE() THEN 1 &#xA;&#x9;         WHEN s.[Answer Code for Reqs] &lt;&gt; 'NYP' THEN 1&#xA;&#x9;         ELSE 0 END AS DM005_Check&#xA;&#x9;  , 1 AS DM006_Check&#xA;&#x9;  , 1 AS DM007_Check&#xA;&#x9;  , 1 AS DM008_Check&#xA;&#x9;  , 1 AS DM009_Check&#xA;&#x9;  , 1 AS DM010_Check&#xA;&#x9;  , 1 AS DM011_Check&#xA;  FROM source.sap_title_data s&#xA;  ) src &#xA;  ) rst;&#xA;GO&#xA;&#xA;&#xA;DROP TABLE IF EXISTS source.sap_titles_not_meeting_requirements;&#xA;GO&#xA;SELECT * INTO source.sap_titles_not_meeting_requirements&#xA;  FROM (&#xA;SELECT ilv.*&#xA;  FROM (&#xA;SELECT src.*&#xA;     , src.[DM001_Check] &amp; src.[DM002_Check] &amp; src.[DM004_Check] &amp; src.[DM006_Check] &amp; &#xA;&#x9;   src.[DM007_Check] &amp; src.[DM008_Check] &amp; src.[DM009_Check] &amp; src.[DM010_Check] &amp; src.[DM011_Check] AS not_meeting_requirements&#xA;  FROM [source].[sap_titles] src&#xA;  ) ilv&#xA; WHERE ilv.not_meeting_requirements = 0&#xA; ) ilv; " xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Not meeting Criteria"
@@ -1622,8 +1607,8 @@ SELECT src.*
                   <connections>
                     <connection
                       refId="Package\Not meeting Criteria\not meeting criteria\Read data.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2498,8 +2483,8 @@ SELECT src.*
                   <connections>
                     <connection
                       refId="Package\Not meeting Criteria\not meeting criteria\SAP Titles not meeting criteria.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3013,7 +2998,7 @@ SELECT src.*
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{B0C812FB-EE00-4BDF-B7D5-AA6AEDD93ECA}"
               SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'titles' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_titles_not_meeting_requirements;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'Staged'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -3097,17 +3082,6 @@ SELECT src.*
           Id="Package\Evaluate Criteria"
           TopLeft="388.124994216487,38.3157901948839" />
         <NodeLayout
-          Size="125.333333333334,42.6666666666667"
-          Id="Package\Evaluate Requirement Criteria\sap_titles"
-          TopLeft="37.8666666666667,17.3333333333333" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="205.333333333334,114.666666666667"
-          Size="205.333333333334,158"
-          Id="Package\Evaluate Requirement Criteria"
-          TopLeft="21.6250032689422,52.9473681377241" />
-        <NodeLayout
           Size="170.666666666667,42.6666666666667"
           Id="Package\Not meeting Criteria\not meeting criteria"
           TopLeft="198.249991264194,22.649124751681" />
@@ -3173,7 +3147,7 @@ SELECT src.*
     design-time-name="Package\Evaluate Criteria\Evaluate Criteria">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="129.333333333334,42.6666666666667"
           Id="Package\Evaluate Criteria\Evaluate Criteria\Read data"
@@ -3201,7 +3175,9 @@ SELECT src.*
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3232,7 +3208,7 @@ SELECT src.*
     design-time-name="Package\Not meeting Criteria\not meeting criteria">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="222.666666666667,42.6666666666667"
           Id="Package\Not meeting Criteria\not meeting criteria\SAP Titles not meeting criteria"
@@ -3260,7 +3236,9 @@ SELECT src.*
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

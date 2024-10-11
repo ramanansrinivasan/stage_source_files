@@ -11,11 +11,23 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="119"
-  DTS:VersionGUID="{3E898409-642B-45D0-AF16-C703359D022F}">
+  DTS:VersionBuild="123"
+  DTS:VersionGUID="{9537F287-5D86-43D6-9921-BF188957EEA1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DM_Working_DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3B1D0695-43AA-4A6D-947C-39C0FAA63320}"
+      DTS:ObjectName="DM_Working_DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=DM_DryRun3_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{3B1D0695-43AA-4A6D-947C-39C0FAA63320}UKWWHDSQLWI099.DM_DryRun3_NP3;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[IBD_Titles]"
       DTS:CreationName="FLATFILE"
@@ -1129,8 +1141,8 @@ AND Shipping_Point_Receiving_Pt = 1019</property>
                       <connections>
                         <connection
                           refId="Package\IBD extract\Foreach Loop Container\Stage Inbound Deliveries Extract\sap_inbound_deliveries filter requirements.Connections[OleDbConnection]"
-                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                          connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                           description="The OLE DB runtime connection used to access the database."
                           name="OleDbConnection" />
                       </connections>
@@ -1466,8 +1478,8 @@ AND Shipping_Point_Receiving_Pt = 1019</property>
                       <connections>
                         <connection
                           refId="Package\IBD extract\Foreach Loop Container\Stage Inbound Deliveries Extract\sap_inbound_deliveries_fullload.Connections[OleDbConnection]"
-                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                          connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                           description="The OLE DB runtime connection used to access the database."
                           name="OleDbConnection" />
                       </connections>
@@ -1802,7 +1814,7 @@ AND Shipping_Point_Receiving_Pt = 1019</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{3B1D0695-43AA-4A6D-947C-39C0FAA63320}"
               SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'inbound' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_inbound_deliveries;&#xA;TRUNCATE TABLE source.sap_inbound_deliveries_fullload;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'inbound' AND run_status = 'New'&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -1825,7 +1837,7 @@ AND Shipping_Point_Receiving_Pt = 1019</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{3B1D0695-43AA-4A6D-947C-39C0FAA63320}"
               SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_status = 'Extracted' WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -2110,8 +2122,8 @@ AND Shipping_Point_Receiving_Pt = 1019</property>
                   <connections>
                     <connection
                       refId="Package\Stage IBD Title Data\Stage IBD Titles Extact\Populate SAP IBD Titles.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2531,8 +2543,8 @@ AND Shipping_Point_Receiving_Pt = 1019</property>
                   <connections>
                     <connection
                       refId="Package\Stage IBD Title Data\Stage IBD Titles Extact\Populate SAP Missing Titles.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -2683,8 +2695,8 @@ and ibt.ibd_Supply_Edition = std.[Supply Edition]</property>
                   <connections>
                     <connection
                       refId="Package\Stage IBD Title Data\Stage IBD Titles Extact\Read Title data for IBD titles.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -3370,7 +3382,7 @@ and ibt.ibd_Supply_Edition = std.[Supply Edition]</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{3B1D0695-43AA-4A6D-947C-39C0FAA63320}"
               SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'inbound' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_inbound_title_data;&#xA;TRUNCATE TABLE source.sap_inbound_missing_titles;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'inbound' AND run_status = 'Extracted'&#xA;GO&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -3640,8 +3652,8 @@ and ibt.ibd_Supply_Edition = std.[Supply Edition]</property>
                   <connections>
                     <connection
                       refId="Package\Stage IBD Vendor Data\Stage IBD Vendor Extact\Populate SAP IBD Vendors.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -4159,8 +4171,8 @@ and ibt.ibd_Supply_Edition = std.[Supply Edition]</property>
                   <connections>
                     <connection
                       refId="Package\Stage IBD Vendor Data\Stage IBD Vendor Extact\Populate SAP Missing Vendors.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -4296,8 +4308,8 @@ on ibv.ibd_Vendor = svd.Vendor</property>
                   <connections>
                     <connection
                       refId="Package\Stage IBD Vendor Data\Stage IBD Vendor Extact\Read Vendor data for IBD titles.Connections[OleDbConnection]"
-                      connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                      connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                      connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                      connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -5127,7 +5139,7 @@ on ibv.ibd_Vendor = svd.Vendor</property>
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{3B1D0695-43AA-4A6D-947C-39C0FAA63320}"
               SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'inbound' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_inbound_vendor_data;&#xA;TRUNCATE TABLE source.sap_inbound_missing_vendors;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'inbound' AND run_status = 'Extracted'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -5151,1325 +5163,6 @@ on ibv.ibd_Vendor = svd.Vendor</property>
       </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Stage Missing IBD Title Data"
-      DTS:CreationName="STOCK:SEQUENCE"
-      DTS:Description="Sequence Container"
-      DTS:Disabled="True"
-      DTS:DTSID="{eabd6e47-6684-407a-80ff-325b71e16124}"
-      DTS:ExecutableType="STOCK:SEQUENCE"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Stage Missing IBD Title Data">
-      <DTS:Variables />
-      <DTS:Executables>
-        <DTS:Executable
-          DTS:refId="Package\Stage Missing IBD Title Data\Foreach Loop Container"
-          DTS:CreationName="STOCK:FOREACHLOOP"
-          DTS:Description="Foreach Loop Container"
-          DTS:DTSID="{e9042a2d-365e-45c6-8dc8-4dd95990f046}"
-          DTS:ExecutableType="STOCK:FOREACHLOOP"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Foreach Loop Container">
-          <DTS:ForEachEnumerator
-            DTS:CreationName="Microsoft.ForEachFileEnumerator"
-            DTS:DTSID="{4261f158-eede-48e3-bdb6-2bda0c049d3e}"
-            DTS:ObjectName="{D1297655-7804-4AC9-A43E-AC656C356415}">
-            <DTS:ObjectData>
-              <ForEachFileEnumeratorProperties>
-                <FEFEProperty
-                  Folder="Y:\SAP Extracts\IBD" />
-                <FEFEProperty
-                  FileSpec="Titles_Missing_IBD*csv*" />
-                <FEFEProperty
-                  FileNameRetrievalType="0" />
-                <FEFEProperty
-                  Recurse="0" />
-              </ForEachFileEnumeratorProperties>
-            </DTS:ObjectData>
-          </DTS:ForEachEnumerator>
-          <DTS:Variables />
-          <DTS:Executables>
-            <DTS:Executable
-              DTS:refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact"
-              DTS:CreationName="Microsoft.Pipeline"
-              DTS:Description="Data Flow Task"
-              DTS:DTSID="{411179ef-ae17-4376-80c6-7ec1df28536c}"
-              DTS:ExecutableType="Microsoft.Pipeline"
-              DTS:LocaleID="-1"
-              DTS:ObjectName="Stage Missing IBD Titles Extact"
-              DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-              <DTS:Variables />
-              <DTS:ObjectData>
-                <pipeline
-                  version="1">
-                  <components>
-                    <component
-                      refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records"
-                      componentClassID="Microsoft.DerivedColumn"
-                      contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-                      description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-                      name="attach run_id on source records"
-                      usesDispositions="true">
-                      <inputs>
-                        <input
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Inputs[Derived Column Input]"
-                          description="Input to the Derived Column Transformation"
-                          name="Derived Column Input">
-                          <externalMetadataColumns />
-                        </input>
-                      </inputs>
-                      <outputs>
-                        <output
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Output]"
-                          description="Default Output of the Derived Column Transformation"
-                          exclusionGroup="1"
-                          name="Derived Column Output"
-                          synchronousInputId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Inputs[Derived Column Input]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Output].Columns[run_id]"
-                              dataType="i4"
-                              errorOrTruncationOperation="Computation"
-                              errorRowDisposition="FailComponent"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Output].Columns[run_id]"
-                              name="run_id"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  containsID="true"
-                                  dataType="System.String"
-                                  description="Derived Column Expression"
-                                  name="Expression">@[User::varRunID]</property>
-                                <property
-                                  containsID="true"
-                                  dataType="System.String"
-                                  description="Derived Column Friendly Expression"
-                                  expressionType="Notify"
-                                  name="FriendlyExpression">@[User::varRunID]</property>
-                              </properties>
-                            </outputColumn>
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                        <output
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output]"
-                          description="Error Output of the Derived Column Transformation"
-                          exclusionGroup="1"
-                          isErrorOut="true"
-                          name="Derived Column Error Output"
-                          synchronousInputId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Inputs[Derived Column Input]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                    <component
-                      refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles"
-                      componentClassID="Microsoft.FlatFileSource"
-                      contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-                      description="Flat File Source"
-                      localeId="2057"
-                      name="Read Missing IBD Titles"
-                      usesDispositions="true"
-                      version="1">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Specifies whether zero-length columns are treated as null."
-                          name="RetainNulls">false</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                          name="FileNameColumnName"></property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Connections[FlatFileConnection]"
-                          connectionManagerID="{C01C9C90-9B4A-4F6F-8E13-E964F2924FD7}:invalid"
-                          connectionManagerRefId="{C01C9C90-9B4A-4F6F-8E13-E964F2924FD7}:invalid"
-                          name="FlatFileConnection" />
-                      </connections>
-                      <outputs>
-                        <output
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output]"
-                          name="Flat File Source Output">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[ISBN]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[ISBN]"
-                              name="ISBN"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Created On]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Created On]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Created On]"
-                              name="Created On"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Plant]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Plant]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Plant]"
-                              name="Plant"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Storage Location]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Storage Location]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Storage Location]"
-                              name="Storage Location"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Supply Edition]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Supply Edition]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Supply Edition]"
-                              name="Supply Edition"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Answer Code for Reqs]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code for Reqs]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Answer Code for Reqs]"
-                              name="Answer Code for Reqs"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Answer Code Text]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code Text]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Answer Code Text]"
-                              name="Answer Code Text"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[ISBN Name]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN Name]"
-                              length="500"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[ISBN Name]"
-                              name="ISBN Name"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Original Pub Date of Product]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Original Pub Date of Product]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Original Pub Date of Product]"
-                              name="Original Pub Date of Product"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Comm  imp  code no ]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Comm  imp  code no ]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Comm  imp  code no ]"
-                              name="Comm  imp  code no "
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Commodity code 2]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Commodity code 2]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Commodity code 2]"
-                              name="Commodity code 2"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[SE publication date]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication date]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[SE publication date]"
-                              name="SE publication date"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[SE publication price]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication price]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[SE publication price]"
-                              name="SE publication price"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Author Artist]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Author Artist]"
-                              length="500"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Author Artist]"
-                              name="Author Artist"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance publisher]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance publisher]"
-                              name="Finance publisher"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance publisher description]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher description]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance publisher description]"
-                              name="Finance publisher description"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance Imprint]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance Imprint]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance Imprint]"
-                              name="Finance Imprint"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance imprint description]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance imprint description]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance imprint description]"
-                              name="Finance imprint description"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Export Pub Date of Product]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Export Pub Date of Product]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Export Pub Date of Product]"
-                              name="Export Pub Date of Product"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Binding]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Binding]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Binding]"
-                              name="Binding"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Binding Description]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Binding Description]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Binding Description]"
-                              name="Binding Description"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Country of origin]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Country of origin]"
-                              length="50"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Country of origin]"
-                              name="Country of origin"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the data is in binary format."
-                                  name="UseBinaryFormat">false</property>
-                              </properties>
-                            </outputColumn>
-                          </outputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="ISBN" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Created On]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Created On" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Plant]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Plant" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Storage Location]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Storage Location" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Supply Edition]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Supply Edition" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code for Reqs]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Answer Code for Reqs" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Answer Code Text]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Answer Code Text" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[ISBN Name]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="ISBN Name" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Original Pub Date of Product]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Original Pub Date of Product" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Comm  imp  code no ]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Comm  imp  code no " />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Commodity code 2]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Commodity code 2" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication date]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="SE publication date" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[SE publication price]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="SE publication price" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Author Artist]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Author Artist" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance publisher" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance publisher description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance publisher description" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance Imprint]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance Imprint" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Finance imprint description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance imprint description" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Export Pub Date of Product]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Export Pub Date of Product" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Binding]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Binding" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Binding Description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Binding Description" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].ExternalColumns[Country of origin]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Country of origin" />
-                          </externalMetadataColumns>
-                        </output>
-                        <output
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Error Output]"
-                          isErrorOut="true"
-                          name="Flat File Source Error Output">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                              codePage="1252"
-                              dataType="text"
-                              description="Flat File Source Error Output Column"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                              name="Flat File Source Error Output Column" />
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                    <component
-                      refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data"
-                      componentClassID="Microsoft.OLEDBDestination"
-                      contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-                      description="OLE DB Destination"
-                      name="sap_ibd_title_data"
-                      usesDispositions="true"
-                      version="4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                          name="CommandTimeout">0</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the name of the database object used to open a rowset."
-                          name="OpenRowset">[source].[sap_ibd_title_data]</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the variable that contains the name of the database object used to open a rowset."
-                          name="OpenRowsetVariable"></property>
-                        <property
-                          dataType="System.String"
-                          description="The SQL command to be executed."
-                          name="SqlCommand"
-                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the column code page to use when code page information is unavailable from the data source."
-                          name="DefaultCodePage">1252</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Forces the use of the DefaultCodePage property value when describing character data."
-                          name="AlwaysUseDefaultCodePage">false</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies the mode used to access the database."
-                          name="AccessMode"
-                          typeConverter="AccessMode">3</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                          name="FastLoadKeepIdentity">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                          name="FastLoadKeepNulls">false</property>
-                        <property
-                          dataType="System.String"
-                          description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                          name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                        <property
-                          dataType="System.Int32"
-                          description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                          name="FastLoadMaxInsertCommitSize">2147483647</property>
-                      </properties>
-                      <connections>
-                        <connection
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Connections[OleDbConnection]"
-                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
-                          description="The OLE DB runtime connection used to access the database."
-                          name="OleDbConnection" />
-                      </connections>
-                      <inputs>
-                        <input
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input]"
-                          errorOrTruncationOperation="Insert"
-                          errorRowDisposition="FailComponent"
-                          hasSideEffects="true"
-                          name="OLE DB Destination Input">
-                          <inputColumns>
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[ISBN]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="ISBN"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[ISBN]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Created On]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Created On"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Created On]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Plant]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Plant"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Plant]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Storage Location]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Storage Location"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Storage Location]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Supply Edition]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Supply Edition"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Supply Edition]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Answer Code for Reqs]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Answer Code for Reqs"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Answer Code for Reqs]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Answer Code Text]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Answer Code Text"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Answer Code Text]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[ISBN Name]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="500"
-                              cachedName="ISBN Name"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[ISBN Name]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Original Pub Date of Product]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Original Pub Date of Product"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Original Pub Date of Product]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Comm  imp  code no ]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Comm  imp  code no "
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Comm  imp  code no ]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Commodity code 2]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Commodity code 2"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Commodity code 2]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[SE publication date]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="SE publication date"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[SE publication date]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[SE publication price]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="SE publication price"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[SE publication price]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Author Artist]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="500"
-                              cachedName="Author Artist"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Author Artist]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Finance publisher]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Finance publisher"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance publisher]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Finance publisher description]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Finance publisher description"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance publisher description]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Finance Imprint]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Finance Imprint"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance Imprint]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Finance imprint description]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Finance imprint description"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Finance imprint description]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Export Pub Date of Product]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Export Pub Date of Product"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Export Pub Date of Product]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Binding]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Binding"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Binding]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Binding Description]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Binding Description"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Binding Description]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[Country of origin]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Country of origin"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output].Columns[Country of origin]" />
-                            <inputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].Columns[run_id]"
-                              cachedDataType="i4"
-                              cachedName="run_id"
-                              externalMetadataColumnId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Output].Columns[run_id]" />
-                          </inputColumns>
-                          <externalMetadataColumns
-                            isUsed="True">
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="ISBN" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Created On]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Created On" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Plant]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Plant" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Storage Location]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Storage Location" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Supply Edition]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Supply Edition" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code for Reqs]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Answer Code for Reqs" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Answer Code Text]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Answer Code Text" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[ISBN Name]"
-                              codePage="1252"
-                              dataType="str"
-                              length="1000"
-                              name="ISBN Name" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Original Pub Date of Product]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Original Pub Date of Product" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Comm  imp  code no ]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Comm  imp  code no " />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Commodity code 2]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Commodity code 2" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication date]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="SE publication date" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[SE publication price]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="SE publication price" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Author Artist]"
-                              codePage="1252"
-                              dataType="str"
-                              length="500"
-                              name="Author Artist" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance publisher" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance publisher description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance publisher description" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance Imprint]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance Imprint" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Finance imprint description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Finance imprint description" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Export Pub Date of Product]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Export Pub Date of Product" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Binding" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Binding Description]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Binding Description" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[Country of origin]"
-                              codePage="1252"
-                              dataType="str"
-                              length="50"
-                              name="Country of origin" />
-                            <externalMetadataColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input].ExternalColumns[run_id]"
-                              dataType="i4"
-                              name="run_id" />
-                          </externalMetadataColumns>
-                        </input>
-                      </inputs>
-                      <outputs>
-                        <output
-                          refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Outputs[OLE DB Destination Error Output]"
-                          exclusionGroup="1"
-                          isErrorOut="true"
-                          name="OLE DB Destination Error Output"
-                          synchronousInputId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                  </components>
-                  <paths>
-                    <path
-                      refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact.Paths[Derived Column Output]"
-                      endId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data.Inputs[OLE DB Destination Input]"
-                      name="Derived Column Output"
-                      startId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Outputs[Derived Column Output]" />
-                    <path
-                      refId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact.Paths[Flat File Source Output]"
-                      endId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records.Inputs[Derived Column Input]"
-                      name="Flat File Source Output"
-                      startId="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles.Outputs[Flat File Source Output]" />
-                  </paths>
-                </pipeline>
-              </DTS:ObjectData>
-            </DTS:Executable>
-          </DTS:Executables>
-          <DTS:ForEachVariableMappings>
-            <DTS:ForEachVariableMapping
-              DTS:CreationName=""
-              DTS:DTSID="{552A4015-781A-44F0-AE1E-2423D4016DC3}"
-              DTS:ObjectName="{552A4015-781A-44F0-AE1E-2423D4016DC3}"
-              DTS:ValueIndex="0"
-              DTS:VariableName="User::varCurrentFile" />
-          </DTS:ForEachVariableMappings>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Stage Missing IBD Title Data\Truncate sap_missing_ibd_title_data"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{5251559c-4f47-4ade-aeed-15dc4c3b7f21}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="Truncate sap_missing_ibd_title_data"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-              SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'titles' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_ibd_title_data;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'titles' AND run_status = 'New'&#xA;GO" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::varRunID"
-                SQLTask:ParameterDirection="Output"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
-          </DTS:ObjectData>
-        </DTS:Executable>
-        <DTS:Executable
-          DTS:refId="Package\Stage Missing IBD Title Data\update run_status"
-          DTS:CreationName="Microsoft.ExecuteSQLTask"
-          DTS:Description="Execute SQL Task"
-          DTS:DTSID="{f17e2038-bff5-461f-97f0-9aa618d666e5}"
-          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-          DTS:LocaleID="-1"
-          DTS:ObjectName="update run_status"
-          DTS:ThreadHint="1">
-          <DTS:Variables />
-          <DTS:ObjectData>
-            <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
-              SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_status = 'Staged' WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
-              <SQLTask:ParameterBinding
-                SQLTask:ParameterName="0"
-                SQLTask:DtsVariableName="User::varRunID"
-                SQLTask:ParameterDirection="Input"
-                SQLTask:DataType="3"
-                SQLTask:ParameterSize="-1" />
-            </SQLTask:SqlTaskData>
-          </DTS:ObjectData>
-        </DTS:Executable>
-      </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Stage Missing IBD Title Data.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{a674f62e-e0c6-4883-aa22-02abc0bb3b2b}"
-          DTS:From="Package\Stage Missing IBD Title Data\Truncate sap_missing_ibd_title_data"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\Stage Missing IBD Title Data\Foreach Loop Container" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Stage Missing IBD Title Data.PrecedenceConstraints[Constraint 1]"
-          DTS:CreationName=""
-          DTS:DTSID="{2f86e09a-f7fc-4f31-8d9c-4f4e0a407182}"
-          DTS:From="Package\Stage Missing IBD Title Data\Foreach Loop Container"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Stage Missing IBD Title Data\update run_status" />
-      </DTS:PrecedenceConstraints>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\update run_status"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -6481,7 +5174,7 @@ on ibv.ibd_Vendor = svd.Vendor</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+          SQLTask:Connection="{3B1D0695-43AA-4A6D-947C-39C0FAA63320}"
           SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_status = 'Staged' WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
@@ -6532,14 +5225,6 @@ on ibv.ibd_Vendor = svd.Vendor</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="237.333333333334,42.6666666666667"
-          Id="Package\IBD extract\Truncate sap_inbound_deliveries"
-          TopLeft="45.9780064714142,29.9122855312167" />
-        <NodeLayout
-          Size="192,42.6666666666667"
-          Id="Package\IBD extract\update run_status"
-          TopLeft="57.8530062944629,390.228079314928" />
-        <NodeLayout
           Size="235.333333333334,42.6666666666667"
           Id="Package\IBD extract\Foreach Loop Container\Stage Inbound Deliveries Extract"
           TopLeft="3.62500002793968,52.0263166652161" />
@@ -6550,6 +5235,14 @@ on ibv.ibd_Vendor = svd.Vendor</property>
           Size="246,196.666666666667"
           Id="Package\IBD extract\Foreach Loop Container"
           TopLeft="37.5833323461314,132.26316298177" />
+        <NodeLayout
+          Size="237.333333333334,42.6666666666667"
+          Id="Package\IBD extract\Truncate sap_inbound_deliveries"
+          TopLeft="45.9780064714142,29.9122855312167" />
+        <NodeLayout
+          Size="192,42.6666666666667"
+          Id="Package\IBD extract\update run_status"
+          TopLeft="57.8530062944629,390.228079314928" />
         <EdgeLayout
           Id="Package\IBD extract.PrecedenceConstraints[Constraint]"
           TopLeft="162.614002742106,72.5789521978834">
@@ -6597,7 +5290,7 @@ on ibv.ibd_Vendor = svd.Vendor</property>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="360,579.333333333334"
+          PanelSize="360,580"
           Size="360,622.666666666667"
           Id="Package\IBD extract"
           TopLeft="28.59374957392,95.1052649480157" />
@@ -6639,7 +5332,7 @@ on ibv.ibd_Vendor = svd.Vendor</property>
           Id="Package\Stage IBD Title Data"
           TopLeft="541.249991934747,87.5789490168774" />
         <NodeLayout
-          Size="210.666666666667,42.6666666666667"
+          Size="197.333333333334,42.6666666666667"
           Id="Package\Stage IBD Vendor Data\Stage IBD Vendor Extact"
           TopLeft="92.7916631183278,134.347958066585" />
         <NodeLayout
@@ -6648,18 +5341,18 @@ on ibv.ibd_Vendor = svd.Vendor</property>
           TopLeft="92.7916631183278,25.1403536718418" />
         <EdgeLayout
           Id="Package\Stage IBD Vendor Data.PrecedenceConstraints[Constraint 2]"
-          TopLeft="198.124996451661,67.8070203385085">
+          TopLeft="194.791663118328,67.8070203385085">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,66.5409377280766"
+              EndConnector="0,66.5409377280765"
               Start="0,0"
-              End="0,59.0409377280766">
+              End="0,59.0409377280765">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,59.0409377280766" />
+                    End="0,59.0409377280765" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6675,76 +5368,6 @@ on ibv.ibd_Vendor = svd.Vendor</property>
           Size="388.666666666667,382.666666666667"
           Id="Package\Stage IBD Vendor Data"
           TopLeft="538.315964200689,561.460527347148" />
-        <NodeLayout
-          Size="228,42.6666666666667"
-          Id="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact"
-          TopLeft="18.4999941512946,7.29473945645415" />
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="251.333333333334,105.333333333334"
-          Size="251.333333333334,148"
-          Id="Package\Stage Missing IBD Title Data\Foreach Loop Container"
-          TopLeft="10.0520850213553,92.4850873168434" />
-        <NodeLayout
-          Size="253.333333333334,42.6666666666667"
-          Id="Package\Stage Missing IBD Title Data\Truncate sap_missing_ibd_title_data"
-          TopLeft="8.58333182459079,13.5087745055378" />
-        <NodeLayout
-          Size="165.333333333334,42.6666666666667"
-          Id="Package\Stage Missing IBD Title Data\update run_status"
-          TopLeft="49.8333312099181,308.916674802701" />
-        <EdgeLayout
-          Id="Package\Stage Missing IBD Title Data.PrecedenceConstraints[Constraint]"
-          TopLeft="135.48437508964,56.1754411722045">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36.309646144639"
-              Start="0,0"
-              End="0,28.809646144639">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.809646144639" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stage Missing IBD Title Data.PrecedenceConstraints[Constraint 1]"
-          TopLeft="134.109374782303,240.485087316843">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68.4315874858572"
-              Start="0,0"
-              End="0,60.9315874858572">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,60.9315874858572" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <ContainerLayout
-          HeaderHeight="43"
-          IsExpanded="True"
-          PanelSize="346,404"
-          Size="346,446.666666666667"
-          Id="Package\Stage Missing IBD Title Data"
-          TopLeft="1075.93748396728,100.407896626772" />
         <NodeLayout
           Size="165.333333333334,42.6666666666667"
           Id="Package\update run_status"
@@ -7130,7 +5753,9 @@ on ibv.ibd_Vendor = svd.Vendor</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7200,7 +5825,9 @@ on ibv.ibd_Vendor = svd.Vendor</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7296,43 +5923,33 @@ on ibv.ibd_Vendor = svd.Vendor</property>
         <NodeLayout
           Size="170.666666666667,42.6666666666667"
           Id="Package\Stage IBD Vendor Data\Stage IBD Vendor Extact\Read Vendor data for IBD titles"
-          TopLeft="639.076923076923,135.461538461538" />
+          TopLeft="663.076923076923,135.461538461538" />
         <NodeLayout
           Size="229.333333333334,42.6666666666667"
           Id="Package\Stage IBD Vendor Data\Stage IBD Vendor Extact\attach run_id on source records"
           TopLeft="639.076923076923,266.576923076923" />
         <EdgeLayout
           Id="Package\Stage IBD Vendor Data\Stage IBD Vendor Extact.Paths[OLE DB Source Output]"
-          TopLeft="724.410256410256,178.128205128205">
+          TopLeft="751.076923076923,178.128205128205">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="29.3333333333333,88.4487179487184"
+              EndConnector="0,88.4487179487183"
               Start="0,0"
-              End="29.3333333333333,80.9487179487184">
+              End="0,80.9487179487183">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.2243589743592" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,40.2243589743592"
-                    Point2="0,44.2243589743592"
-                    Point3="4,44.2243589743592" />
-                  <mssgle:LineSegment
-                    End="25.3333333333333,44.2243589743592" />
-                  <mssgle:CubicBezierSegment
-                    Point1="25.3333333333333,44.2243589743592"
-                    Point2="29.3333333333333,44.2243589743592"
-                    Point3="29.3333333333333,48.2243589743592" />
-                  <mssgle:LineSegment
-                    End="29.3333333333333,80.9487179487184" />
+                    End="0,80.9487179487183" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7402,7 +6019,9 @@ on ibv.ibd_Vendor = svd.Vendor</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7475,111 +6094,6 @@ on ibv.ibd_Vendor = svd.Vendor</property>
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="193.333333333334,42.6666666666667"
-          Id="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\Read Missing IBD Titles"
-          TopLeft="161.874997587875,133.421055142899" />
-        <NodeLayout
-          Size="166.666666666667,42.6666666666667"
-          Id="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data"
-          TopLeft="645.624990379438,130.684212986122" />
-        <NodeLayout
-          Size="229.333333333334,42.6666666666667"
-          Id="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\attach run_id on source records"
-          TopLeft="357.499994672835,229.894741169304" />
-        <EdgeLayout
-          Id="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact.Paths[Flat File Source Output]"
-          TopLeft="258.541664254542,176.087721809566">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="176.736108196071,53.8070193597383"
-              Start="0,0"
-              End="176.736108196071,46.3070193597383">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.0605334753175" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,28.0605334753175"
-                    Point2="0,32.0605334753175"
-                    Point3="4,32.0605334753175" />
-                  <mssgle:LineSegment
-                    End="172.736108196071,32.0605334753175" />
-                  <mssgle:CubicBezierSegment
-                    Point1="172.736108196071,32.0605334753175"
-                    Point2="176.736108196071,32.0605334753175"
-                    Point3="176.736108196071,36.0605334753175" />
-                  <mssgle:LineSegment
-                    End="176.736108196071,46.3070193597383" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact.Paths[Derived Column Output]"
-          TopLeft="509.055550228391,229.894741169304">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="219.902773484381,-56.5438615165154"
-              Start="0,0"
-              End="219.902773484381,-49.0438615165154">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-18.8525999200697" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-18.8525999200697"
-                    Point2="0,-22.8525999200697"
-                    Point3="4,-22.8525999200697" />
-                  <mssgle:LineSegment
-                    End="215.902773484381,-22.8525999200697" />
-                  <mssgle:CubicBezierSegment
-                    Point1="215.902773484381,-22.8525999200697"
-                    Point2="219.902773484381,-22.8525999200697"
-                    Point3="219.902773484381,-26.8525999200697" />
-                  <mssgle:LineSegment
-                    End="219.902773484381,-49.0438615165154" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage Missing IBD Title Data\Foreach Loop Container\Stage Missing IBD Titles Extact\sap_ibd_title_data">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

@@ -11,11 +11,23 @@
   DTS:LocaleID="2057"
   DTS:ObjectName="2-stage_sap_vendor_data"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{69B3C993-70CA-4DDD-805A-9707CB66DECF}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{0A2313B2-4681-4784-B69A-AB7372D3F3BB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DM_Working_DB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3D79A60A-92E6-462A-9C2B-6F41CD26E0B8}"
+      DTS:ObjectName="DM_Working_DB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=UKWWHDSQLWI099;Initial Catalog=DM_DryRun3_NP3;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-2-stage_sap_vendor_data-{3D79A60A-92E6-462A-9C2B-6F41CD26E0B8}UKWWHDSQLWI099.DM_DryRun3_NP3;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[SAP_Vendors_Extract_CSV]"
       DTS:CreationName="FLATFILE"
@@ -1381,8 +1393,8 @@
                       <connections>
                         <connection
                           refId="Package\Stage Vendor Data\Foreach Loop Container\Stage Vendor Extract\sap_vendor_data.Connections[OleDbConnection]"
-                          connectionManagerID="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}:external"
-                          connectionManagerRefId="Project.ConnectionManagers[UKWWHDSQLWI099.DM_Dev_NP3]"
+                          connectionManagerID="Package.ConnectionManagers[DM_Working_DB]"
+                          connectionManagerRefId="Package.ConnectionManagers[DM_Working_DB]"
                           description="The OLE DB runtime connection used to access the database."
                           name="OleDbConnection" />
                       </connections>
@@ -1879,7 +1891,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{3D79A60A-92E6-462A-9C2B-6F41CD26E0B8}"
               SQLTask:SqlStatementSource="DECLARE @run INTEGER = 0;&#xA;&#xA;&#xA;SELECT  @run = COUNT(1)&#xA;  FROM config.wms_dm_run_ctl WHERE package_name = 'vendors' AND run_status = 'SentToFile'&#xA;&#xA;IF @run=0  &#xA;BEGIN&#xA;TRUNCATE TABLE source.sap_vendor_data;&#xA;END&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'vendors' AND run_status = 'New'&#xA;GO&#xA;/*&#xA;TRUNCATE TABLE source.sap_vendor_data;&#xA;GO&#xA;  SELECT ?=run_id FROM [config].[wms_dm_run_ctl] WHERE package_name = 'vendors' AND run_status = 'New'&#xA;*/" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -1902,7 +1914,7 @@
           <DTS:Variables />
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
-              SQLTask:Connection="{E1B5E2B3-9822-4B5B-96AD-AD15BFB27EED}"
+              SQLTask:Connection="{3D79A60A-92E6-462A-9C2B-6F41CD26E0B8}"
               SQLTask:SqlStatementSource="UPDATE [config].[wms_dm_run_ctl] SET run_status = 'Staged' WHERE run_id = ?" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
               <SQLTask:ParameterBinding
                 SQLTask:ParameterName="0"
@@ -1947,14 +1959,6 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="206.666666666667,42.6666666666667"
-          Id="Package\Stage Vendor Data\Truncate sap_vendor_data"
-          TopLeft="16.7083317035189,74.2806995135154" />
-        <NodeLayout
-          Size="165.333333333334,42.6666666666667"
-          Id="Package\Stage Vendor Data\update run_status"
-          TopLeft="397.958326022451,400.771939689543" />
-        <NodeLayout
           Size="181.333333333334,42.6666666666667"
           Id="Package\Stage Vendor Data\Foreach Loop Container\Stage Vendor Extract"
           TopLeft="130.999993219972,64.1929894492015" />
@@ -1965,6 +1969,14 @@
           Size="426.666666666667,252"
           Id="Package\Stage Vendor Data\Foreach Loop Container"
           TopLeft="263.583328024795,36.526307856277" />
+        <NodeLayout
+          Size="206.666666666667,42.6666666666667"
+          Id="Package\Stage Vendor Data\Truncate sap_vendor_data"
+          TopLeft="16.7083317035189,74.2806995135154" />
+        <NodeLayout
+          Size="165.333333333334,42.6666666666667"
+          Id="Package\Stage Vendor Data\update run_status"
+          TopLeft="397.958326022451,400.771939689543" />
         <EdgeLayout
           Id="Package\Stage Vendor Data.PrecedenceConstraints[Constraint]"
           TopLeft="223.374998370186,95.6140328468487">
@@ -2024,7 +2036,7 @@
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="882,551.333333333334"
+          PanelSize="882,552"
           Size="882,594.666666666667"
           Id="Package\Stage Vendor Data"
           TopLeft="92.4999986216426,80.7368436249339" />
